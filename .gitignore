@@ -9,9 +9,10 @@ venv/
 *.mp3
 *.ogg
 
-# Local render receipts
+# Local render receipts / bridge outputs
 receipts/*.json
 !receipts/.gitkeep
+outputs/
 
 # OS/editor noise
 .DS_Store
