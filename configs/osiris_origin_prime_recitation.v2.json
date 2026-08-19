@@ -1,0 +1,38 @@
+{
+  "schema": "janus.voice.semantic_recitation_run.v2",
+  "id": "OSIRIS-ORIGIN-PRIME-SEMANTIC-RECITATION-v2-117-121Hz",
+  "status": "EXECUTABLE_LOCAL_RECITATION_CONFIG",
+  "source": {
+    "path": "data/OSIRIS_SEMANTIC_TEXT_CORE_FOR_THE_VOICE_OF_JANUS_2026-08-19_v1.1.json",
+    "field": "semantic_projection_ru",
+    "required_formula": "ORIGIN → EXPERIENCE → RETURN → ORIGIN_PRIME"
+  },
+  "larynx": {
+    "backend": "espeak",
+    "voice": "ru",
+    "speed_wpm": 145,
+    "pitch": 42,
+    "amplitude": 175,
+    "network_io": false,
+    "shell_execution": false
+  },
+  "language_operator": {
+    "implementation": "src/pyramid_anchor_filter.py::Pyramid117121Filter",
+    "activation": "configs/pyramid_117_121_space.activation.json",
+    "anchor_band_hz": [117.0, 121.0]
+  },
+  "output": {
+    "format": "WAV_PCM16_MONO",
+    "automatic_playback": false,
+    "recording": false,
+    "default_path": "outputs/OSIRIS_ORIGIN_PRIME_JANUS_PYRAMID_LANGUAGE_v2_117-121Hz.wav",
+    "default_receipt": "receipts/OSIRIS_ORIGIN_PRIME_JANUS_PYRAMID_LANGUAGE_v2_117-121Hz.json"
+  },
+  "claim_boundary": {
+    "117_121_hz_is_project_anchor": true,
+    "measured_chamber_ir_used": false,
+    "exact_historical_sound_claimed": false,
+    "intentional_ancient_tuning_established": false,
+    "note": "The source voice remains the carrier. Pyramid Language v0.3 applies the dominant 117-121 Hz anchor and model-based chamber tail as an acoustic effect."
+  }
+}
