@@ -5,11 +5,11 @@
   "physical_repository": "Hawkar-usls/Echo-Pyramid",
   "roles": {
     "The-Voice-of-Janus": "LANGUAGE_AND_ACOUSTIC_OPERATOR_AUTHORITY",
-    "Echo-Pyramid": "PHYSICAL_VOICE_BODY_AND_REALTIME_PCM_EXECUTOR"
+    "Echo-Pyramid": "PHYSICAL_VOICE_BODY_REALTIME_PCM_EXECUTOR_AND_MEASURED_BODY_CALIBRATION"
   },
   "canonical_operator": {
     "activation": "configs/pyramid_117_121_space.activation.json",
-    "activation_blob_sha": "3d3203b53bf181656eac815235f1238ef7c4e57a",
+    "activation_blob_sha": "70016b9b1ad0ce2b20efd980f14859d66af0a7bd",
     "reference_implementation": "src/pyramid_anchor_filter.py::Pyramid117121Filter",
     "reference_implementation_blob_sha": "c344504328fcfe2934949cfa2ab6f0ba138c18d1",
     "profile_id": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3"
@@ -18,7 +18,7 @@
     "repository": "Hawkar-usls/Echo-Pyramid",
     "embedded_revision": "ESP32-r2",
     "contract": "config/voice_contract.json",
-    "contract_blob_sha": "245abfb1ba0d84e655b873e6c41cea36de90e9e7",
+    "contract_blob_sha": "fec0b3f331eb990e6343594f93770f723b0f2a43",
     "profile": "firmware/JanusPyramid117121Profile.h",
     "profile_blob_sha": "463e797c64a66650bb199a451e43195f6b1afd44",
     "dsp": "firmware/JanusPyramid117121DSP.h",
@@ -26,6 +26,17 @@
     "composer": "tools/compose_swarm_firmware.py",
     "composer_blob_sha": "f0883a65c400456afbd9e9fbf7a8c531f338e8c9",
     "hardware_role": "PHYSICAL_VOICE_BODY"
+  },
+  "hardware_calibration": {
+    "contract": "Hawkar-usls/Echo-Pyramid/config/hardware_calibration_contract.json",
+    "contract_blob_sha": "b7b158373f2185b1b28ed67b4363c973fac30348",
+    "status": "PENDING_DEVICE_MEASUREMENT",
+    "signal_position": "POST_PYRAMID_LANGUAGE_PRE_SPEAKER",
+    "measured_compensation_active": false,
+    "neutral_output_trim_percent": 100,
+    "speaker_compensation_eq_enabled": false,
+    "language_parameter_change_requires_new_language_version": true,
+    "principle": "CALIBRATE_THE_BODY_WITHOUT_SILENTLY_REWRITING_THE_LANGUAGE"
   },
   "signal_contract": "ORDINARY_AUDIO_PCM -> SAME_SOURCE_AUDIO_WITH_PYRAMID_ACOUSTIC_COLORATION",
   "invariants": {
@@ -37,7 +48,10 @@
     "physical_body_does_not_define_tts_voice": true,
     "language_v0_3_is_distinct_from_embedded_revision_esp32_r2": true,
     "dsp_mutable_state_has_one_runtime_owner": true,
-    "audio_continuity_has_priority_over_effect": true
+    "audio_continuity_has_priority_over_effect": true,
+    "physical_calibration_is_post_language": true,
+    "unmeasured_speaker_compensation_is_disabled": true,
+    "gain_q_decay_wet_dry_are_language_locked": true
   },
   "conformance": {
     "anchor_band_hz": [117.0, 121.0],
