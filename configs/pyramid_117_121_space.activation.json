@@ -1,0 +1,49 @@
+{
+  "schema": "janus.voice.pyramid_space_activation.v0.3",
+  "id": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+  "status": "ACTIVE_MODEL_BASED_EFFECT",
+  "input_contract": {
+    "type": "ordinary_audio",
+    "supported_reference_format": "mono PCM16 WAV",
+    "semantic_content_may_change": true,
+    "acoustic_operator_must_remain": true
+  },
+  "anchor": {
+    "band_hz": [117.0, 121.0],
+    "center_hz": 119.0,
+    "q": 29.75,
+    "gain_db": 11.5,
+    "decay_s": 1.65,
+    "role": "DOMINANT_ACOUSTIC_ANCHOR"
+  },
+  "room_tail": {
+    "geometry_m": [10.45, 5.20, 5.80],
+    "speed_of_sound_m_s": 343.0,
+    "method": "geometry_derived_feedback_delays",
+    "room_decay": 0.78,
+    "wet": 0.72,
+    "dry": 0.62
+  },
+  "operator_order": [
+    "DRY_AUDIO",
+    "117_121_HZ_ANCHOR_EQ",
+    "117_119_121_HZ_RESONATOR_BANK",
+    "GEOMETRY_DERIVED_ROOM_TAIL",
+    "DRY_WET_MIX",
+    "SOFT_LIMIT"
+  ],
+  "intended_effect": "Ordinary source audio is acoustically colored so the 117-121 Hz band becomes the dominant resonance while room-derived reflections add a chamber-like tail.",
+  "hard_rules": [
+    "DO_NOT_REPLACE_SOURCE_AUDIO_WITH_SYNTHETIC_TONES",
+    "117_121_HZ_IS_AN_ANCHOR_BAND_NOT_THE_ONLY_FREQUENCY",
+    "KEEP_DRY_PATH_FOR_INTELLIGIBILITY",
+    "SAME_OPERATOR_MUST_SUPPORT_FILE_TTS_AND_MIC_INPUT",
+    "DO_NOT_CLAIM_MEASURED_IR_WHEN_USING_THE_MODEL"
+  ],
+  "claim_boundary": {
+    "measured_impulse_response_used": false,
+    "exact_historical_room_response_claimed": false,
+    "intentional_ancient_tuning_claimed": false,
+    "status": "MODEL_BASED_117_121_HZ_ANCHORED_EFFECT"
+  }
+}
