@@ -1,0 +1,33 @@
+{
+  "id": "GREAT-PYRAMID-KINGS-CHAMBER-EXAMPLE-v0.1",
+  "schema_version": "0.1",
+  "status": "ILLUSTRATIVE_MODEL_BASED",
+  "claim_boundary": "This preset is a first-order rectangular-room example. It is not evidence that the chamber was intentionally tuned, and the dimensions/acoustics must be source-verified before scientific use.",
+  "geometry_m": {
+    "Lx": 10.45,
+    "Ly": 5.20,
+    "Lz": 5.80
+  },
+  "environment": {
+    "speed_of_sound_m_s": 343.0
+  },
+  "solver": {
+    "max_index": 5,
+    "frequency_limit_hz": 240.0,
+    "cluster_tolerance_hz": 0.25
+  },
+  "render": {
+    "sample_rate_hz": 44100,
+    "duration_s": 8.0,
+    "max_render_modes": 12,
+    "min_render_hz": 20.0,
+    "max_render_hz": 220.0,
+    "master_gain": 0.85,
+    "fade_s": 0.08
+  },
+  "creative_translation": {
+    "enabled": false,
+    "minimum_audible_hz": 20.0,
+    "method": "octave_up_power_of_two"
+  }
+}
