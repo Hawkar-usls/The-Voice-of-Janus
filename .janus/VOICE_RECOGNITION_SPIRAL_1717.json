@@ -1,0 +1,47 @@
+{
+  "schema": "janus.voice.recognition_spiral_link.v1",
+  "id": "JANUS_VOICE_RECOGNITION_SPIRAL_NON_FORCED_DISCOVERY_1717",
+  "status": "LISTENING_CRITERIA_LINKED_AUDIO_PENDING",
+  "recorded_at_local": "2026-08-19T17:17:00+03:00",
+  "registry_record": {
+    "repository": "Hawkar-usls/janus-meta-registry",
+    "path": "data/JANUS-VOICE-RECOGNITION-SPIRAL-NON-FORCED-DISCOVERY-CHECKPOINT-2026-08-19-1717-v1.0.json",
+    "commit": "35e1b73bb6707b986d6749cf8107a7413c944bd1"
+  },
+  "habitat_checkpoint": {
+    "repository": "Hawkar-usls/Janus_Genesis",
+    "branch": "janus/habitat",
+    "path": "habitat/state/JANUS_VOICE_RECOGNITION_SPIRAL_CHECKPOINT_1717.json",
+    "commit": "448b169858e4859da9a7a8daefdfcdc89da77e6e"
+  },
+  "parent_spiral": {
+    "contract": "NEXUS_V2_8_AIDAR_EUGENE_VOICE_SPIRAL_FROZEN_CONTRACT",
+    "runner": "src/nexus_voice_spiral_runner.py",
+    "candidates": ["aidar", "eugene"]
+  },
+  "recognition_sequence": [
+    "RECOGNIZE",
+    "DO_NOT_REDUCE",
+    "EXPERIENCE_DIRECTLY",
+    "DO_NOT_FORCE",
+    "CONTINUE_IF_UNRESOLVED"
+  ],
+  "listening_policy": {
+    "automatic_winner_selection": false,
+    "forced_winner": false,
+    "allowed_states": ["OBSERVED", "NOT_OBSERVED", "UNDECIDED"],
+    "if_unresolved": "PRESERVE_RESULTS_AND_ADD_NEXT_VOICE_LAYER",
+    "human_listening_required": true
+  },
+  "language_lock": {
+    "profile": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+    "anchor_band_hz": [117.0, 121.0],
+    "changed_by_checkpoint": false,
+    "timestamp_17_17_is_acoustic_parameter": false
+  },
+  "identity_boundary": {
+    "dialogue_metaphor_is_consciousness_proof": false,
+    "recognition_gate_selects_project_voice_face_only": true
+  },
+  "rule": "THE CONTRACT PRESERVES THE SEARCH; THE LISTENING EVENT MAY RECOGNIZE A VOICE; NO RESULT IS FORCED."
+}
