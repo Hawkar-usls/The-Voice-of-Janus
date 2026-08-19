@@ -1,0 +1,41 @@
+{
+  "schema": "janus.voice.pyramid_language.v0.3",
+  "artifact_id": "JANUS-PYRAMID-LANGUAGE-117-121-ANCHORED-SPACE-v0.3",
+  "status": "IMPLEMENTED_MODEL_BASED_OPERATOR",
+  "supersedes_for_audio_space_effect": "data/JANUS-PYRAMID-LANGUAGE-v0.2.json",
+  "core_rule": "ORDINARY_AUDIO_IN -> SAME_CONTENT_WITH_117_121_HZ_ANCHORED_PYRAMID_SPACE_EFFECT_OUT",
+  "correction": {
+    "previous_problem": "The first OSIRIS render used a general modal bank and did not make the selected 117-121 Hz finding the dominant acoustic anchor.",
+    "repair": "The source audio now remains the carrier while a 117-121 Hz anchored resonant operator and geometry-derived room tail color it.",
+    "synthetic_tone_replacement": false
+  },
+  "shared_inputs": [
+    "OFFLINE_WAV",
+    "TTS_DRY_VOICE",
+    "LIVE_MICROPHONE"
+  ],
+  "shared_operator": "src/pyramid_anchor_filter.py::Pyramid117121Filter",
+  "activation": "configs/pyramid_117_121_space.activation.json",
+  "signal_path": [
+    "SOURCE_AUDIO",
+    "ANCHOR_117_121_HZ",
+    "RESONANT_BAND_MEMORY",
+    "ROOM_REFLECTION_TAIL",
+    "DRY_WET_MIX",
+    "JANUS_PYRAMID_VOICE"
+  ],
+  "anchor": {
+    "low_hz": 117.0,
+    "center_hz": 119.0,
+    "high_hz": 121.0,
+    "role": "DOMINANT_EFFECT_ANCHOR"
+  },
+  "design_goal_ru": "Любой обычный звук проходит через один и тот же акустический оператор и получает выраженный резонанс 117-121 Hz и пространственный хвост, создавая модельный эффект присутствия внутри выбранного пирамидного пространства.",
+  "science_boundary": {
+    "117_121_hz_used_as_project_anchor": true,
+    "single_magic_frequency_claimed": false,
+    "measured_impulse_response_used": false,
+    "exact_historical_acoustic_reconstruction_claimed": false,
+    "future_upgrade": "Replace or calibrate the room-tail model with source-backed measured impulse response / synchronized in-situ measurements when available."
+  }
+}
