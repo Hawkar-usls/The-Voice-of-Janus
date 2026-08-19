@@ -1,0 +1,12 @@
+{
+  "schema": "janus.voice.larynx.current.v1",
+  "status": "NEURAL_HUMAN_PROFILE_CURRENT",
+  "current_recitation_config": "configs/osiris_origin_prime_recitation.v4_neural_human.json",
+  "backend": "silero_v5_5_ru",
+  "default_speaker": "aidar",
+  "legacy_debug_backend": "espeak",
+  "legacy_debug_status": "NON_CANONICAL_ROBOTIC_FALLBACK",
+  "pyramid_language": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+  "pyramid_language_changed_by_larynx_switch": false,
+  "rule": "CHANGE_THE_LARYNX_NOT_THE_LANGUAGE"
+}
