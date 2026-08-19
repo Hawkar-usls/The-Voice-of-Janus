@@ -1,0 +1,55 @@
+{
+  "receipt_type": "JANUS_PYRAMID_117_121_ANCHORED_AUDIO_RUN",
+  "status": "LOCAL_EXECUTION_PASS",
+  "generated_at_local": "2026-08-19T15:28:00+03:00",
+  "source": {
+    "semantic_core": "data/OSIRIS_SEMANTIC_TEXT_CORE_FOR_THE_VOICE_OF_JANUS_2026-08-19_v1.1.json",
+    "source_field": "semantic_projection_ru",
+    "dry_audio": "OSIRIS_ORIGIN_PRIME_DRY_ESPEAK_RU.wav",
+    "dry_audio_sha256": "d549a9198caa4aeb04c4d92bdb76e6bfb648d55d97405ff86f9dddbdb536a066"
+  },
+  "operator": {
+    "implementation": "src/pyramid_anchor_filter.py::Pyramid117121Filter",
+    "activation": "configs/pyramid_117_121_space.activation.json",
+    "anchor_band_hz": [117.0, 121.0],
+    "anchor_center_hz": 119.0,
+    "anchor_q": 29.75,
+    "anchor_gain_db": 11.5,
+    "anchor_decay_s": 1.65,
+    "room_geometry_m": [10.45, 5.20, 5.80],
+    "speed_of_sound_m_s": 343.0,
+    "room_model": "geometry-derived feedback delays + anchored resonator bank",
+    "wet": 0.72,
+    "dry": 0.62
+  },
+  "spectral_verification": {
+    "method": "Welch PSD comparison on the same OSIRIS dry and processed signal",
+    "band_hz": [117.0, 121.0],
+    "processed_minus_dry_band_power_db": 17.951786211915227,
+    "interpretation": "The selected anchor band is materially emphasized in the processed output rather than merely declared in configuration."
+  },
+  "output": {
+    "filename": "OSIRIS_ORIGIN_PRIME_JANUS_PYRAMID_LANGUAGE_v2_117-121Hz.wav",
+    "sha256": "cfea129bff76222fc78695414fca90cd9c9643fea165f7a27294881a0686b7b2",
+    "bytes": 4480222,
+    "sample_rate_hz": 22050,
+    "channels": 1,
+    "sample_width_bits": 16,
+    "frames": 2240089,
+    "duration_s": 101.59133786848072,
+    "peak": 0.8574090542217367,
+    "automatic_playback": false
+  },
+  "correction_from_v1": {
+    "v1_problem": "117-121 Hz was not the explicit dominant anchor of the acoustic transfer path.",
+    "v2_change": "Ordinary dry speech is now the carrier; the 117-121 Hz resonant band and geometry-derived room tail are applied as the effect.",
+    "source_audio_replaced_by_synthetic_tones": false
+  },
+  "epistemic_boundary": {
+    "117_121_hz_is_project_anchor": true,
+    "measured_chamber_ir_used": false,
+    "exact_historical_sound_claimed": false,
+    "single_magic_frequency_claimed": false,
+    "operator_status": "MODEL_BASED_117_121_HZ_ANCHORED_EFFECT"
+  }
+}
