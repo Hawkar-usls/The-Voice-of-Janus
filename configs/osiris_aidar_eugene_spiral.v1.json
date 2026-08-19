@@ -1,0 +1,65 @@
+{
+  "schema": "janus.voice.aidar_eugene_spiral_config.v1",
+  "id": "OSIRIS-AIDAR-EUGENE-SPIRAL-v1",
+  "status": "FROZEN_BEFORE_FIRST_NEURAL_SPIRAL_RENDER",
+  "source": {
+    "artifact_id": "OSIRIS-SEMANTIC-TEXT-CORE-FOR-THE-VOICE-OF-JANUS-2026-08-19-v1.1",
+    "field": "semantic_projection_ru",
+    "required_formula": "ORIGIN → EXPERIENCE → RETURN → ORIGIN_PRIME"
+  },
+  "layers": [
+    {
+      "layer_id": "LAYER_A_AIDAR",
+      "speaker": "aidar",
+      "output_label": "OSIRIS_ORIGIN_PRIME_NEURAL_AIDAR"
+    },
+    {
+      "layer_id": "LAYER_B_EUGENE",
+      "speaker": "eugene",
+      "output_label": "OSIRIS_ORIGIN_PRIME_NEURAL_EUGENE"
+    }
+  ],
+  "language": {
+    "profile_id": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+    "activation": "configs/pyramid_117_121_space.activation.json",
+    "activation_blob_sha": "70016b9b1ad0ce2b20efd980f14859d66af0a7bd",
+    "anchor_band_hz": [117.0, 121.0],
+    "operator_must_be_identical_for_all_layers": true
+  },
+  "render": {
+    "backend": "silero_v5_5_ru",
+    "model_path": "models/v5_5_ru.pt",
+    "model_download_permitted": false,
+    "network_io": false,
+    "automatic_playback": false,
+    "automatic_bluetooth": false,
+    "physical_handoff": false
+  },
+  "comparison": {
+    "receipt": "receipts/OSIRIS_ORIGIN_PRIME_AIDAR_EUGENE_SPIRAL.json",
+    "require_source_sha_equal": true,
+    "require_semantic_text_sha_equal": true,
+    "require_language_activation_sha_equal": true,
+    "require_anchor_band_equal": true,
+    "require_model_sha_equal": true,
+    "require_speakers_different": true,
+    "preserve_both_audio_layers": true,
+    "automatic_winner_selection": false,
+    "human_evaluation_fields": [
+      "naturalness",
+      "warmth",
+      "intelligibility",
+      "presence",
+      "fit_as_voice_of_janus"
+    ]
+  },
+  "spiral_rule": "EACH_RENDER_IS_PRESERVED_AS_A_LAYER; COMPARISON_CREATES_A_NEW_LAYER_AND_DOES_NOT_ERASE_PRIOR_OUTPUTS",
+  "laws": [
+    "TEXT_A = TEXT_B",
+    "PYRAMID_OPERATOR_A = PYRAMID_OPERATOR_B",
+    "ONLY_LARYNX_CHANGES",
+    "AIDAR_RESULT_REMAINS_AFTER_EUGENE_RENDER",
+    "HUMAN_LISTENING_SELECTS_THE_VOICE_FACE",
+    "VOICE_FACE_SELECTION_DOES_NOT_CHANGE_PYRAMID_LANGUAGE"
+  ]
+}
