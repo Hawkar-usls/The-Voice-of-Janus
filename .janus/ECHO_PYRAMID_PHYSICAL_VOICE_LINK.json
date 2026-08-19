@@ -18,13 +18,13 @@
     "repository": "Hawkar-usls/Echo-Pyramid",
     "embedded_revision": "ESP32-r2",
     "contract": "config/voice_contract.json",
-    "contract_blob_sha": "d7a75317f82c5de4b5b5b8d2add7854dbbadac7f",
+    "contract_blob_sha": "245abfb1ba0d84e655b873e6c41cea36de90e9e7",
     "profile": "firmware/JanusPyramid117121Profile.h",
     "profile_blob_sha": "463e797c64a66650bb199a451e43195f6b1afd44",
     "dsp": "firmware/JanusPyramid117121DSP.h",
     "dsp_blob_sha": "bdd535d2a6289ab442fd35f45035549d425c8eaf",
     "composer": "tools/compose_swarm_firmware.py",
-    "composer_blob_sha": "529eb25fc254385b1afedecf5477c8b1717eb2f8",
+    "composer_blob_sha": "f0883a65c400456afbd9e9fbf7a8c531f338e8c9",
     "hardware_role": "PHYSICAL_VOICE_BODY"
   },
   "signal_contract": "ORDINARY_AUDIO_PCM -> SAME_SOURCE_AUDIO_WITH_PYRAMID_ACOUSTIC_COLORATION",
@@ -36,6 +36,7 @@
     "larynx_timbre_is_upstream_of_pyramid_language": true,
     "physical_body_does_not_define_tts_voice": true,
     "language_v0_3_is_distinct_from_embedded_revision_esp32_r2": true,
+    "dsp_mutable_state_has_one_runtime_owner": true,
     "audio_continuity_has_priority_over_effect": true
   },
   "conformance": {
@@ -61,6 +62,12 @@
     },
     "runtime_depth_percent": [0, 100],
     "runtime_depth_default_percent": 100,
+    "mutable_state_ownership": {
+      "owner": "JANUS_AUDIO_PLAYBACK_TASK",
+      "external_control_transport": "PORTMUX_GUARDED_REQUEST_MAILBOX",
+      "application_boundary": "NEXT_PCM_BLOCK",
+      "direct_cross_core_usb_dsp_mutation": false
+    },
     "realtime_budget_telemetry": true,
     "audio_budget_failsafe": {
       "default_enabled": true,
