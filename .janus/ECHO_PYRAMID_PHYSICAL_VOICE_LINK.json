@@ -1,0 +1,49 @@
+{
+  "schema": "janus.voice.echo_pyramid_physical_link.v1",
+  "status": "ACTIVE_CROSS_REPO_BINDING",
+  "language_repository": "Hawkar-usls/The-Voice-of-Janus",
+  "physical_repository": "Hawkar-usls/Echo-Pyramid",
+  "roles": {
+    "The-Voice-of-Janus": "LANGUAGE_AND_ACOUSTIC_OPERATOR_AUTHORITY",
+    "Echo-Pyramid": "PHYSICAL_VOICE_BODY_AND_REALTIME_PCM_EXECUTOR"
+  },
+  "canonical_operator": {
+    "activation": "configs/pyramid_117_121_space.activation.json",
+    "activation_blob_sha": "3d3203b53bf181656eac815235f1238ef7c4e57a",
+    "reference_implementation": "src/pyramid_anchor_filter.py::Pyramid117121Filter",
+    "reference_implementation_blob_sha": "c344504328fcfe2934949cfa2ab6f0ba138c18d1",
+    "profile_id": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3"
+  },
+  "physical_implementation": {
+    "repository": "Hawkar-usls/Echo-Pyramid",
+    "contract": "config/voice_contract.json",
+    "contract_blob_sha": "78130263f19c4375d4d91e625c526631fee805ca",
+    "profile": "firmware/JanusPyramid117121Profile.h",
+    "profile_blob_sha": "1a411abe9661ad4812acca0a5996d7587a79b5e4",
+    "dsp": "firmware/JanusPyramid117121DSP.h",
+    "hardware_role": "PHYSICAL_VOICE_BODY"
+  },
+  "signal_contract": "ORDINARY_AUDIO_PCM -> SAME_SOURCE_AUDIO_WITH_PYRAMID_ACOUSTIC_COLORATION",
+  "invariants": {
+    "semantic_content_preserved": true,
+    "source_audio_replaced_by_synthetic_tones": false,
+    "dry_path_preserved": true,
+    "same_language_operator_for_tts_mic_music_and_bluetooth_pcm": true,
+    "larynx_timbre_is_upstream_of_pyramid_language": true,
+    "physical_body_does_not_define_tts_voice": true
+  },
+  "conformance": {
+    "anchor_band_hz": [117.0, 121.0],
+    "anchor_center_hz": 119.0,
+    "anchor_q": 29.75,
+    "anchor_gain_db": 11.5,
+    "anchor_decay_s": 1.65,
+    "room_geometry_m": [10.45, 5.20, 5.80],
+    "speed_of_sound_m_s": 343.0,
+    "room_decay": 0.78,
+    "wet": 0.72,
+    "dry": 0.62,
+    "embedded_variation": "Echo-Pyramid keeps the anchor path at 44.1 kHz and evaluates the room-tail at 11.025 kHz to bound SRAM while preserving modeled delay times."
+  },
+  "claim_boundary": "MODEL_BASED_117_121_HZ_ANCHORED_EFFECT; NOT_A_MEASURED_CHAMBER_IR"
+}
