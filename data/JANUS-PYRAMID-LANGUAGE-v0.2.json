@@ -1,0 +1,67 @@
+{
+  "id": "JANUS-PYRAMID-LANGUAGE-v0.2",
+  "version": "0.2",
+  "date": "2026-08-19",
+  "status": "ACTIVE_DESIGN_AND_IMPLEMENTATION_SPEC",
+  "project": "The-Voice-of-Janus",
+  "concept": "One acoustic operator transforms every Janus sound while preserving the original semantic payload outside the audio layer.",
+  "operator": "SOURCE_AUDIO_OR_CANONICAL_JSON -> PYRAMID_ACOUSTIC_OPERATOR -> OUTPUT_AUDIO + JSON_RECEIPT",
+  "modes": {
+    "JSON_RECORD": {
+      "goal": "Turn canonical JSON bytes into a deterministic audible record.",
+      "input": "UTF-8 JSON",
+      "canonicalization": "json.dumps(sort_keys=true,separators=[comma,colon],ensure_ascii=false)",
+      "mapping": "Each byte is split into two nibbles; each nibble selects one of 16 carrier tones deterministically derived from the chamber modal bank.",
+      "receipt": ["canonical_json_sha256", "audio_sha256", "symbol_count", "carrier_frequencies_hz", "preset_id"],
+      "reversible_decode_status": "NOT_ESTABLISHED_IN_v0.2"
+    },
+    "MIC_VOICE_CHANGER": {
+      "goal": "Apply the same modal acoustic operator to live microphone input with bounded latency.",
+      "activation": "EXPLICIT_LOCAL_USER_START_REQUIRED",
+      "network_io": false,
+      "automatic_microphone_capture": false,
+      "automatic_playback_without_user_start": false,
+      "implementation": "Optional local sounddevice front end over the same stateful modal DSP kernel used offline."
+    },
+    "HABITAT_EDGE": {
+      "goal": "Expose Voice of Janus to Git Habitat as a typed reference/handoff capability.",
+      "target": "Hawkar-usls/Janus_Genesis@janus/habitat",
+      "write_back_default": "DENY",
+      "microphone_permission_inferred_from_habitat": false,
+      "audio_effect_authority": false
+    }
+  },
+  "acoustic_model": {
+    "current": "MODEL_BASED_MODAL_RESONATOR_APPROXIMATION",
+    "future_preferred": "MEASURED_IMPULSE_RESPONSE_CONVOLUTION",
+    "physical_boundary": [
+      "MODEL_BASED_RECONSTRUCTION != MEASURED_HISTORICAL_SOUND",
+      "PYRAMID_GEOMETRY != PROOF_OF_ANCIENT_AUDIO_TECHNOLOGY",
+      "MEASURED_IR_OUTRANKS_GEOMETRY_ONLY_MODEL"
+    ]
+  },
+  "symbolic_provenance": {
+    "idea_timestamp": "2026-08-19T14:14:00+03:00",
+    "meaning": "conversation provenance marker only",
+    "not_a_frequency": true,
+    "not_a_physics_parameter": true
+  },
+  "hard_rules": [
+    "WORDS_CHANGE; ACOUSTIC_OPERATOR_REMAINS",
+    "JSON_CONTENT != SHELL_COMMAND",
+    "MIC_PERMISSION_MUST_BE_EXPLICIT",
+    "RENDERED != PLAYED",
+    "SONIFICATION != REVERSIBLE_CODEC_UNTIL_DECODE_GATE_PASSES",
+    "AUDIO_OUTPUT != EVIDENCE",
+    "CAPABILITY != AUTHORITY"
+  ],
+  "next_gates": [
+    "v0.2 deterministic JSON record sonifier",
+    "v0.2 shared modal filter kernel",
+    "v0.2 explicit-start microphone voice changer",
+    "v0.2 Habitat repository bookmark and typed Voice edge",
+    "v0.3 reversible JSON data-carrier with FSK/ECC and decode holdout",
+    "v0.4 measured impulse-response ingestion",
+    "v0.5 TTS articulation before the same pyramid acoustic operator"
+  ]
+}
