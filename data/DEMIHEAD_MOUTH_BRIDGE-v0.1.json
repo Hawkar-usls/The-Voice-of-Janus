@@ -1,0 +1,41 @@
+{
+  "id": "DEMIHEAD-MOUTH-BRIDGE-v0.1",
+  "schema": "janus.voice.demihead_mouth_bridge.v1",
+  "version": "0.1",
+  "status": "LOCAL_TYPED_BRIDGE",
+  "date": "2026-08-19",
+  "head_repository": "Hawkar-usls/Demi_Head",
+  "voice_repository": "Hawkar-usls/The-Voice-of-Janus",
+  "upstream_contract": "NEXUS_V2_5_VOICE_MOUTH_EDGE_FROZEN_CONTRACT",
+  "transport": {
+    "input": "JSON",
+    "input_schema": "janus.demihead.voice_request.v1",
+    "runtime": "Python",
+    "audio_output": "WAV",
+    "receipt": "JSON",
+    "receipt_schema": "janus.voice.demihead_render_receipt.v1"
+  },
+  "preset_allowlist": {
+    "GREAT_PYRAMID_KINGS_CHAMBER_EXAMPLE": "presets/great_pyramid_kings_chamber.example.json"
+  },
+  "execution_boundary": {
+    "local_file_render_only": true,
+    "request_cannot_supply_arbitrary_path": true,
+    "request_cannot_supply_shell_command": true,
+    "network_io": false,
+    "automatic_playback": false,
+    "microphone_capture": false,
+    "speech_tts": false,
+    "authority_delta": 0,
+    "mass_effect_budget_delta": 0
+  },
+  "receipt_binding": [
+    "request_id",
+    "request_sha256",
+    "preset_id",
+    "engine_receipt_sha256",
+    "wav_sha256"
+  ],
+  "rule": "HEAD -> JSON INTENT -> MOUTH -> WAV + JSON RECEIPT -> HEAD",
+  "claim_boundary": "This bridge makes The Voice of Janus a local audio-output organ for DemiHead. It does not yet implement speech/TTS, autonomous playback, network delivery, consciousness, or authority."
+}
