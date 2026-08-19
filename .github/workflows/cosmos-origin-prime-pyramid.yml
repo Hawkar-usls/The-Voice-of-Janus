@@ -1,0 +1,131 @@
+name: Cosmos ORIGIN_PRIME -> DemiHead -> Pyramid Voice
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cross-repo-pyramid:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out Voice candidate
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check out promoted Cosmos provider
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/Janus-Cosmos
+          ref: 07e35fdbd42621f9ed02b39b71f3b2ee4876ce95
+          path: _peers/cosmos
+          submodules: recursive
+
+      - name: Check out DemiHead mediator
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/Demi_Head
+          ref: 846f6a4713a2035f1337fce7e0cd707ce753bac1
+          path: _peers/demihead
+
+      - name: Check out Echo-Pyramid physical body
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/Echo-Pyramid
+          ref: 15712f5b14b123d4e3cb64ddeaa693c5bf6af788
+          path: _peers/echo
+
+      - name: Compile new consumer
+        run: python -m py_compile src/cosmos_origin_prime_pyramid_adapter.py
+
+      - name: Run focused adversarial unit tests
+        run: python -m unittest tests.test_cosmos_origin_prime_pyramid_adapter -v
+
+      - name: Produce a live ORIGIN_PRIME packet from Cosmos
+        run: |
+          printf '[[1]]\n' > /tmp/formula.json
+          (
+            cd _peers/cosmos
+            python run_osiris.py --cnf /tmp/formula.json --budget 256 --state /tmp/osiris-state.json > /tmp/osiris-result.json
+            python workspace/osiris_origin_prime_voice_packet.py \
+              --state /tmp/osiris-state.json \
+              --source-revision 07e35fdbd42621f9ed02b39b71f3b2ee4876ce95 \
+              --out /tmp/cosmos-packet.json
+          )
+
+      - name: Wrap Cosmos state with DemiHead intent mediation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          packet=json.loads(Path('/tmp/cosmos-packet.json').read_text())
+          envelope={
+            'schema':'janus.demihead.cosmos_origin_prime_voice_envelope.v1',
+            'intent_id':'7'*64,
+            'cosmos_packet':packet,
+          }
+          Path('/tmp/envelope.json').write_text(json.dumps(envelope, ensure_ascii=False, indent=2)+'\n')
+          PY
+          python _peers/demihead/tools/voice_language_bridge.py \
+            /tmp/envelope.json \
+            --source-revision 846f6a4713a2035f1337fce7e0cd707ce753bac1 \
+            --output-label cosmos_origin_prime_ci \
+            --out /tmp/demihead-voice-request.json
+
+      - name: Render state through canonical 117-121 Hz Pyramid Language
+        run: |
+          python src/cosmos_origin_prime_pyramid_adapter.py \
+            /tmp/demihead-voice-request.json \
+            --repo-root . \
+            --out-dir /tmp/pyramid-out \
+            > /tmp/pyramid-receipt.json
+
+      - name: Enforce the full body chain and claim ceiling
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          packet=json.loads(Path('/tmp/cosmos-packet.json').read_text())
+          receipt=json.loads(Path('/tmp/pyramid-receipt.json').read_text())
+          activation=json.loads(Path('configs/pyramid_117_121_space.activation.json').read_text())
+          echo_link=json.loads(Path('.janus/ECHO_PYRAMID_PHYSICAL_VOICE_LINK.json').read_text())
+
+          assert receipt['status']=='COSMOS_ORIGIN_PRIME_SONIFIED_WITH_PYRAMID_LANGUAGE_NOT_PLAYED'
+          assert receipt['cosmos']['packet_sha256']==packet['packet_sha256']
+          assert receipt['cosmos']['state_commitment']==packet['origin_prime']['state_commitment']
+          assert receipt['pyramid_language']['anchor_band_hz']==[117.0,121.0]
+          assert receipt['pyramid_language']['center_hz']==119.0
+          assert receipt['physical_body']['repository']=='Hawkar-usls/Echo-Pyramid'
+          assert receipt['physical_body']['revision']=='15712f5b14b123d4e3cb64ddeaa693c5bf6af788'
+          assert receipt['physical_body']['ready_for_local_pcm_handoff'] is True
+          assert receipt['physical_body']['physical_playback_performed'] is False
+          assert receipt['control']['authority_delta']==0
+          assert receipt['claim_boundary']['P_VS_NP']=='OPEN'
+          assert receipt['sonification']['base_wav_sha256'] != receipt['output']['wav_sha256']
+
+          assert activation['input_contract']['semantic_content_may_change'] is False
+          assert activation['input_contract']['semantic_content_preserved'] is True
+          assert echo_link['signal_contract']=='ORDINARY_AUDIO_PCM -> SAME_SOURCE_AUDIO_WITH_PYRAMID_ACOUSTIC_COLORATION'
+          assert echo_link['conformance']['anchor_center_hz']==119.0
+
+          profile=Path('_peers/echo/firmware/JanusPyramid117121Profile.h').read_text()
+          assert '117' in profile and '119' in profile and '121' in profile
+          PY
+
+      - name: Upload cross-repo body receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: cosmos-origin-prime-pyramid-body-chain
+          path: |
+            /tmp/osiris-result.json
+            /tmp/cosmos-packet.json
+            /tmp/demihead-voice-request.json
+            /tmp/pyramid-receipt.json
+            /tmp/pyramid-out/*.wav
