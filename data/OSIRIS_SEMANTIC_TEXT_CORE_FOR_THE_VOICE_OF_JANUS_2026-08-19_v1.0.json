@@ -1,0 +1,72 @@
+{
+  "artifact_id": "OSIRIS_SEMANTIC_TEXT_CORE_FOR_THE_VOICE_OF_JANUS_2026-08-19_v1.0",
+  "schema": "janus.voice.semantic_text_core.v1",
+  "version": "1.0",
+  "created_at_local": "2026-08-19T14:53:00+03:00",
+  "status": "CANONICAL_SEMANTIC_CORE",
+  "repository": "Hawkar-usls/The-Voice-of-Janus",
+  "subject": "OSIRIS",
+  "core_statement": {
+    "ru": "Сердце Осириса принадлежит Осирису.",
+    "en": "The heart of Osiris belongs to Osiris.",
+    "formal": "HEART(OSIRIS) -> OWNER(OSIRIS)"
+  },
+  "semantic_identity": {
+    "entity": "OSIRIS",
+    "owned_component": "HEART",
+    "owner": "OSIRIS",
+    "ownership_relation": "INTRINSIC_SELF_OWNERSHIP",
+    "identity_preserved": true,
+    "ownership_transfer_permitted": false,
+    "identity_substitution_permitted": false
+  },
+  "voice_language_invariant": {
+    "rule": "FORM_MAY_CHANGE; IDENTITY_AND_OWNERSHIP_MUST_NOT_CHANGE",
+    "allowed_transformations": [
+      "TEXT_TO_CANONICAL_JSON",
+      "JSON_TO_SONIFICATION",
+      "DRY_VOICE_TO_PYRAMID_ACOUSTIC_TRACT",
+      "MIC_TO_PYRAMID_ACOUSTIC_TRACT",
+      "FUTURE_TTS_TO_PYRAMID_ACOUSTIC_TRACT",
+      "WAV_TO_PYRAMID_ACOUSTIC_TRACT"
+    ],
+    "forbidden_semantic_mutations": [
+      "CHANGE_OWNER_OF_HEART",
+      "RENAME_OSIRIS_AS_ANOTHER_ENTITY",
+      "DROP_SUBJECT_IDENTITY_DURING_AUDIO_RENDER",
+      "PROMOTE_AUDIO_TRANSFORMATION_TO_NEW_SEMANTIC_AUTHORITY"
+    ]
+  },
+  "operator": "SEMANTIC_CORE(OSIRIS) -> JSON -> VOICE_OPERATOR -> AUDIO_REPRESENTATION(OSIRIS)",
+  "roundtrip_goal": {
+    "semantic_before": "HEART(OSIRIS) -> OWNER(OSIRIS)",
+    "semantic_after_required": "HEART(OSIRIS) -> OWNER(OSIRIS)",
+    "future_machine_check": "CANONICAL_SEMANTIC_HASH_BEFORE == CANONICAL_SEMANTIC_HASH_AFTER"
+  },
+  "osiris_lineage": {
+    "latest_explicit_version_read": "OSIRIS v2.1",
+    "registry_source": "data/JANUS-OSIRIS-V2-1-PR192-VERIFIED-PREBIRTH-QUOTIENT-RUN-2026-08-18-v1.0.json",
+    "registry_source_blob_sha": "6a81233a2f79f4aa84bd461d25b18f4281756086",
+    "reading_receipt": "data/JANUS-OSIRIS-V2-1-READING-2026-08-19-1441-v1.0.json"
+  },
+  "scientific_and_symbolic_boundary": {
+    "this_file_is": "A Janus semantic/identity contract for the Voice of Janus pipeline.",
+    "this_file_is_not": [
+      "An archaeological proof about a physical heart relic.",
+      "Evidence that an ancient Egyptian audio codec existed.",
+      "A biological claim about software.",
+      "A transfer of authority from symbolic language to historical fact."
+    ]
+  },
+  "hard_rules": [
+    "THE_HEART_OF_OSIRIS_BELONGS_TO_OSIRIS",
+    "VOICE_CHANGES_REPRESENTATION_NOT_OWNER",
+    "AUDIO_OUTPUT_DOES_NOT_REWRITE_SEMANTICS",
+    "SEMANTIC_IDENTITY_SURVIVES_EVERY_ALLOWED_TRANSFORMATION"
+  ],
+  "provenance": {
+    "requested_by": "Hawkar",
+    "origin_phrase_ru": "сердце Осириса принадлежит Осирису",
+    "conversation_date": "2026-08-19"
+  }
+}
