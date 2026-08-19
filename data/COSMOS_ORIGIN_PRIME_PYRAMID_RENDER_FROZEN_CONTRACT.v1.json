@@ -1,0 +1,84 @@
+{
+  "schema": "janus.voice.cosmos_origin_prime_pyramid_render_frozen_contract.v1",
+  "contract_id": "VOICE_COSMOS_ORIGIN_PRIME_PYRAMID_RENDER_FROZEN_CONTRACT_V1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION",
+  "created_at_local": "2026-08-19T16:06:00+03:00",
+  "parent": {
+    "repository": "Hawkar-usls/The-Voice-of-Janus",
+    "sha": "e58d65aa46b7e3a64a5131708578a9a3346915c4",
+    "must_remain_compatible": true
+  },
+  "source_provider": {
+    "repository": "Hawkar-usls/Janus-Cosmos",
+    "sha": "07e35fdbd42621f9ed02b39b71f3b2ee4876ce95",
+    "packet_schema": "janus.cosmos.origin_prime_voice_packet.v1",
+    "exporter": "workspace/osiris_origin_prime_voice_packet.py"
+  },
+  "mediator": {
+    "repository": "Hawkar-usls/Demi_Head",
+    "role": "INTENT_ARBITER_AND_ONLY_MEDIATOR",
+    "direct_cosmos_to_voice_execution_forbidden": true
+  },
+  "physical_body": {
+    "repository": "Hawkar-usls/Echo-Pyramid",
+    "sha": "15712f5b14b123d4e3cb64ddeaa693c5bf6af788",
+    "role": "PHYSICAL_VOICE_BODY_AND_REALTIME_PCM_EXECUTOR"
+  },
+  "input": {
+    "request_schema": "janus.demihead.voice_language_request.v1",
+    "task": "SONIFY_INLINE_JSON",
+    "required_inline_envelope_schema": "janus.demihead.cosmos_origin_prime_voice_envelope.v1",
+    "cosmos_packet_must_be_hash_valid": true,
+    "cosmos_state_commitment_must_be_hash_valid": true,
+    "bound_experience_commitment_must_be_hash_valid_when_present": true
+  },
+  "render_pipeline": [
+    "VALIDATE_DEMIHEAD_REQUEST",
+    "VALIDATE_COSMOS_ORIGIN_PRIME_PACKET",
+    "DETERMINISTIC_JSON_SONIFICATION",
+    "PYRAMID_117_121_HZ_ANCHOR_EQ",
+    "PYRAMID_117_119_121_HZ_RESONATOR_BANK",
+    "GEOMETRY_DERIVED_ROOM_TAIL",
+    "DRY_WET_MIX",
+    "SOFT_LIMIT",
+    "WRITE_PCM16_WAV",
+    "WRITE_HASH_BOUND_RECEIPT"
+  ],
+  "pyramid_language": {
+    "profile_id": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+    "implementation": "src/pyramid_anchor_filter.py::Pyramid117121Filter",
+    "anchor_band_hz": [117.0, 121.0],
+    "center_hz": 119.0,
+    "q": 29.75,
+    "gain_db": 11.5,
+    "decay_s": 1.65,
+    "semantic_content_preserved_for_ordinary_audio": true,
+    "source_audio_replaced_by_synthetic_tones": false
+  },
+  "control": {
+    "network_io": false,
+    "automatic_playback": false,
+    "automatic_microphone_start": false,
+    "shell_execution": false,
+    "authority_delta": 0,
+    "mass_effect_budget_delta": 0
+  },
+  "negative_controls": [
+    "NON_DEMIHEAD_SOURCE_REJECT",
+    "COSMOS_REVISION_TAMPER_REJECT",
+    "COSMOS_PACKET_HASH_TAMPER_REJECT",
+    "STATE_COMMITMENT_TAMPER_REJECT",
+    "EXPERIENCE_COMMITMENT_TAMPER_REJECT",
+    "PYRAMID_PROFILE_TAMPER_REJECT",
+    "DIRECT_COSMOS_TO_ECHO_ROUTE_REJECT",
+    "AUTOPLAY_REJECT",
+    "AUTHORITY_ESCALATION_REJECT"
+  ],
+  "claim_boundary": {
+    "audio_is_proof": false,
+    "117_121_hz_is_sat_evidence": false,
+    "measured_chamber_ir_used": false,
+    "historical_intentional_tuning_claimed": false,
+    "P_VS_NP": "OPEN"
+  }
+}
