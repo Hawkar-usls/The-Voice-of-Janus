@@ -1,0 +1,3 @@
+# Neural human-like Russian larynx for semantic_recitation_v4.py
+# Silero standalone use requires PyTorch; model weights are provisioned separately.
+torch>=1.12
