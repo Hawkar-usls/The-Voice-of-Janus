@@ -1,0 +1,64 @@
+{
+  "receipt_type": "JANUS_OSIRIS_SEMANTIC_RECITATION_RECEIPT",
+  "runner_semantics": "The-Voice-of-Janus/src/semantic_recitation.py v0.1 + src/pyramid_dsp.py",
+  "status": "LOCAL_EXECUTION_PASS",
+  "generated_at_local": "2026-08-19T15:12:00+03:00",
+  "source": {
+    "artifact_id": "OSIRIS-SEMANTIC-TEXT-CORE-FOR-THE-VOICE-OF-JANUS-2026-08-19-v1.1",
+    "github_blob_sha": "35d61ca69e9593324860bce9f62333e6370e777d",
+    "field": "semantic_projection_ru",
+    "semantic_text_sha256": "3e5433430b5308fc0db5165c2b27085f2db5aaf08b906fa05a41982d10b733dd",
+    "required_formula": "ORIGIN → EXPERIENCE → RETURN → ORIGIN_PRIME",
+    "formula_present": true
+  },
+  "larynx": {
+    "backend": "espeak",
+    "voice": "ru",
+    "speed_wpm": 145,
+    "pitch": 42,
+    "amplitude": 175,
+    "sample_rate_hz": 22050,
+    "dry_wav_sha256": "d549a9198caa4aeb04c4d92bdb76e6bfb648d55d97405ff86f9dddbdb536a066",
+    "stderr": "Full dictionary is not installed for 'ru'",
+    "network_io": false,
+    "shell_execution": false
+  },
+  "language_operator": {
+    "preset": "GREAT-PYRAMID-KINGS-CHAMBER-EXAMPLE-v0.1",
+    "preset_blob_sha": "6b01b8c4b5530d6aa04888d0e63dd878e9ec2d50",
+    "implementation_blob_sha": "c319884e1581ec2da634446f87e94ccb38c4f375",
+    "mode_count": 8,
+    "modes": [
+      {"physical_hz": 16.411483254, "render_hz": 65.645933016, "octave_multiplier": 4},
+      {"physical_hz": 29.568965517, "render_hz": 59.137931034, "octave_multiplier": 2},
+      {"physical_hz": 32.980769231, "render_hz": 65.961538462, "octave_multiplier": 2},
+      {"physical_hz": 33.818049978, "render_hz": 67.636099956, "octave_multiplier": 2},
+      {"physical_hz": 36.838402811, "render_hz": 36.838402811, "octave_multiplier": 1},
+      {"physical_hz": 44.177718955, "render_hz": 44.177718955, "octave_multiplier": 1},
+      {"physical_hz": 44.29508845, "render_hz": 44.29508845, "octave_multiplier": 1},
+      {"physical_hz": 46.530401561, "render_hz": 46.530401561, "octave_multiplier": 1}
+    ],
+    "decay_s": 0.32,
+    "wet": 0.72,
+    "dry": 0.62,
+    "output_gain": 0.85,
+    "claim_boundary": "ILLUSTRATIVE_MODEL_BASED; not a measured impulse response and not evidence of intentional ancient tuning"
+  },
+  "output": {
+    "filename": "OSIRIS_ORIGIN_PRIME_JANUS_PYRAMID_LANGUAGE_v1.wav",
+    "sha256": "838e406d4be8ab2526ce64a7b53e9af1f71e633fa8f9c4b6e311ee75ce7677fb",
+    "bytes": 4392022,
+    "sample_rate_hz": 22050,
+    "channels": 1,
+    "sample_width_bits": 16,
+    "frames": 2195989,
+    "duration_s": 99.59133786848072,
+    "peak": 0.4879994432785783,
+    "automatic_playback": false
+  },
+  "epistemic_boundary": {
+    "measured_chamber_ir_used": false,
+    "exact_historical_sound_claimed": false,
+    "semantic_projection_is_project_curation": true
+  }
+}
