@@ -1,0 +1,50 @@
+{
+  "schema": "janus.voice.cosmos_resonant_origin_prime_pyramid_render_frozen_contract.v1",
+  "contract_id": "VOICE_COSMOS_RESONANT_ORIGIN_PRIME_PYRAMID_RENDER_FROZEN_CONTRACT_V1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION",
+  "parent_adapter": "src/cosmos_origin_prime_pyramid_adapter.py",
+  "parent_adapter_rewritten": false,
+  "source_provider": {
+    "repository": "Hawkar-usls/Janus-Cosmos",
+    "sha": "c543eb6ed753339fabed33d7f0ab880d43433d0f",
+    "packet_schema": "janus.cosmos.origin_prime_voice_packet.v1",
+    "representation_extension_schema": "janus.cosmos.origin_prime_resonant_representation_extension.v1"
+  },
+  "required_mediator": "Hawkar-usls/Demi_Head",
+  "required_lineage": {
+    "memory_may_propose_not_verdict": true,
+    "authority_delta": 0
+  },
+  "voice_profile": {
+    "profile_id": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+    "anchor_band_hz": [117.0, 121.0],
+    "center_hz": 119.0,
+    "q": 29.75,
+    "gain_db": 11.5,
+    "decay_s": 1.65,
+    "semantic_content_preserved": true,
+    "authority_delta": 0
+  },
+  "astral_representation": {
+    "anchor_id": "ORION_BELT_SAH_OSIRIS_CONTEXT_v1",
+    "star_triplet": ["Mintaka", "Alnilam", "Alnitak"],
+    "giza_orion_correlation": "HYPOTHESIS_NOT_ASSERTED_AS_ARCHITECTURAL_FACT",
+    "janus_rebus_alias": "S𓂸ḥ",
+    "janus_rebus_alias_is_historical_transliteration": false,
+    "authority_delta": 0
+  },
+  "output_contract": "SAME_ORIGIN_PRIME_JSON_CONTENT_SONIFIED_AND_COLORED_BY_PYRAMID_LANGUAGE_117_121",
+  "control": {
+    "local_file_render_only": true,
+    "automatic_playback_permitted": false,
+    "network_io_permitted": false,
+    "authority_delta": 0
+  },
+  "claim_ceiling": {
+    "audio_is_proof": false,
+    "117_121_hz_is_sat_evidence": false,
+    "reversible_decode_established": false,
+    "orion_giza_architectural_intent": "NOT_ESTABLISHED",
+    "P_VS_NP": "OPEN"
+  }
+}

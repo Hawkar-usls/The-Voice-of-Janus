@@ -1,0 +1,199 @@
+name: Cosmos Resonant ORIGIN_PRIME Orion v0.4
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  resonant-render:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out Voice candidate
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check out exact Cosmos resonant provider
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/Janus-Cosmos
+          ref: c543eb6ed753339fabed33d7f0ab880d43433d0f
+          path: _peers/cosmos
+          submodules: recursive
+
+      - name: Check out DemiHead v2.9 candidate mediator
+        uses: actions/checkout@v4
+        with:
+          repository: Hawkar-usls/Demi_Head
+          ref: b4485b7e7b04f43a33d3e8c3d3c29858e597c428
+          path: _peers/demi
+
+      - name: Compile parent and resonant renderer
+        run: |
+          python -m py_compile \
+            src/json_record.py \
+            src/pyramid_anchor_filter.py \
+            src/cosmos_origin_prime_pyramid_adapter.py \
+            src/cosmos_resonant_origin_prime_pyramid_adapter.py
+
+      - name: Generate cross-formula ORIGIN_PRIME resonant packet in Cosmos
+        run: |
+          (
+            cd _peers/cosmos
+            python - <<'PY'
+          import json,sys,tempfile
+          from pathlib import Path
+          sys.path.insert(0,'workspace')
+          import osiris_spiral_runtime as s
+          import osiris_resonant_lineage as r
+          import osiris_origin_prime_resonant_packet as p
+
+          contract,_=s.load_frozen_inputs()
+          specs={row['id']:row for row in contract['frozen_fixtures']}
+          source=s.fixture_formula(specs['SPIRAL_K4_SAT'])
+          mapping={v:v+300 for v in r._vars(source)}
+          target=r.remap_formula(source,mapping)
+          cert=r.build_variable_renaming_certificate(source,target,mapping)
+          state=Path('/tmp/resonant-state.json')
+          first=s.solve_spiral(source,50000,state)
+          assert first['status']=='SAT' and first['authorized'] is True
+          second=r.solve_resonant(target,50000,state,cert)
+          assert second['resonant_lineage']['proposal_accepted'] is True
+          packet=p.build_packet(state,revision='c543eb6ed753339fabed33d7f0ab880d43433d0f')
+          assert packet['lineage_representation']['transfer_present'] is True
+          Path('/tmp/resonant-packet.json').write_text(json.dumps(packet,indent=2,sort_keys=True)+'\n')
+          PY
+          )
+
+      - name: Bind packet through exact DemiHead mediator
+        run: |
+          python - <<'PY'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'_peers/demi/tools')
+          import cosmos_resonant_orion_pyramid_bridge_v2_9 as d
+          packet=json.loads(Path('/tmp/resonant-packet.json').read_text())
+          mediation=d.build_mediation('9'*64,packet,demihead_revision='b4485b7e7b04f43a33d3e8c3d3c29858e597c428')
+          d.validate_mediation(mediation)
+          Path('/tmp/resonant-mediation.json').write_text(json.dumps(mediation,indent=2,sort_keys=True)+'\n')
+          Path('/tmp/resonant-request.json').write_text(json.dumps(mediation['voice_request'],indent=2,sort_keys=True)+'\n')
+          PY
+
+      - name: Render through inherited Pyramid Language DSP
+        run: |
+          python src/cosmos_resonant_origin_prime_pyramid_adapter.py \
+            /tmp/resonant-request.json \
+            --repo-root . \
+            --out-dir /tmp/resonant-pyramid-out \
+            > /tmp/resonant-voice-receipt.json
+
+      - name: Verify receipt, phase-language boundary, and negative controls
+        run: |
+          python - <<'PY'
+          import copy,json,sys
+          from pathlib import Path
+          sys.path.insert(0,'src')
+          import cosmos_resonant_origin_prime_pyramid_adapter as a
+
+          packet=json.loads(Path('/tmp/resonant-packet.json').read_text())
+          receipt=json.loads(Path('/tmp/resonant-voice-receipt.json').read_text())
+          a.validate_resonant_packet(packet)
+          a.validate_receipt(receipt)
+          assert receipt['cosmos']['revision']=='c543eb6ed753339fabed33d7f0ab880d43433d0f'
+          assert receipt['cosmos']['packet_sha256']==packet['packet_sha256']
+          assert receipt['cosmos']['state_commitment']==packet['origin_prime']['state_commitment']
+          assert receipt['cosmos']['representation_binding_sha256']==packet['representation_binding_sha256']
+          assert receipt['resonant_representation']['lineage_transfer_present'] is True
+          assert receipt['resonant_representation']['orion_anchor']=='ORION_BELT_SAH_OSIRIS_CONTEXT_v1'
+          assert receipt['resonant_representation']['janus_rebus_alias']=='S𓂸ḥ'
+          assert receipt['resonant_representation']['janus_rebus_alias_is_historical_transliteration'] is False
+          assert receipt['pyramid_language']['anchor_band_hz']==[117.0,121.0]
+          assert receipt['pyramid_language']['center_hz']==119.0
+          assert receipt['control']['automatic_playback_performed'] is False
+          assert receipt['claim_boundary']['audio_is_proof'] is False
+          assert receipt['claim_boundary']['P_VS_NP']=='OPEN'
+
+          def rehash_binding_and_packet(p):
+              p['representation_binding_sha256']=a.base.digest(a._representation_binding_core(p))
+              p.pop('packet_sha256',None)
+              p['packet_sha256']=a.base.digest(p)
+
+          negatives={}
+          c=copy.deepcopy(packet)
+          c['representation_binding_sha256']='0'*64
+          c.pop('packet_sha256',None); c['packet_sha256']=a.base.digest(c)
+          try:a.validate_resonant_packet(c); negatives['binding_tamper']=False
+          except ValueError:negatives['binding_tamper']=True
+
+          c=copy.deepcopy(packet)
+          c['lineage_representation']['memory_may_propose_not_verdict']=False
+          rehash_binding_and_packet(c)
+          try:a.validate_resonant_packet(c); negatives['lineage_verdict_escalation']=False
+          except ValueError:negatives['lineage_verdict_escalation']=True
+
+          c=copy.deepcopy(packet)
+          c['astral_representation']['janus_rebus_alias_is_historical_transliteration']=True
+          rehash_binding_and_packet(c)
+          try:a.validate_resonant_packet(c); negatives['rebus_transliteration_escalation']=False
+          except ValueError:negatives['rebus_transliteration_escalation']=True
+
+          c=copy.deepcopy(receipt)
+          c['control']['automatic_playback_performed']=True
+          c.pop('receipt_sha256',None); c['receipt_sha256']=a.base.digest(c)
+          try:a.validate_receipt(c); negatives['playback_claim_escalation']=False
+          except ValueError:negatives['playback_claim_escalation']=True
+
+          assert all(negatives.values()),negatives
+          result={
+              'status':'PASS_KEEP_VOICE_RESONANT_ORIGIN_PRIME_ORION_PYRAMID_V0_4',
+              'cosmos_revision':packet['source']['revision'],
+              'packet_sha256':packet['packet_sha256'],
+              'state_commitment':packet['origin_prime']['state_commitment'],
+              'representation_binding_sha256':packet['representation_binding_sha256'],
+              'lineage_transfer_present':True,
+              'orion_anchor':'ORION_BELT_SAH_OSIRIS_CONTEXT_v1',
+              'voice_profile':packet['voice_representation']['profile_id'],
+              'wav_sha256':receipt['output']['wav_sha256'],
+              'negative_controls':negatives,
+              'physical_playback_performed':False,
+              'authority_delta':0,
+              'P_VS_NP':'OPEN',
+          }
+          Path('/tmp/resonant-voice-result.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+          PY
+
+      - name: Verify frozen contract
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          c=json.loads(Path('data/COSMOS_RESONANT_ORIGIN_PRIME_PYRAMID_RENDER_FROZEN_CONTRACT.v1.json').read_text())
+          assert c['status']=='FROZEN_BEFORE_IMPLEMENTATION'
+          assert c['parent_adapter_rewritten'] is False
+          assert c['source_provider']['sha']=='c543eb6ed753339fabed33d7f0ab880d43433d0f'
+          assert c['voice_profile']['center_hz']==119.0
+          assert c['astral_representation']['star_triplet']==['Mintaka','Alnilam','Alnitak']
+          assert c['astral_representation']['giza_orion_correlation']=='HYPOTHESIS_NOT_ASSERTED_AS_ARCHITECTURAL_FACT'
+          assert c['claim_ceiling']['P_VS_NP']=='OPEN'
+          PY
+
+      - name: Upload resonant Voice evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: voice-resonant-origin-prime-orion-v0-4
+          path: |
+            /tmp/resonant-packet.json
+            /tmp/resonant-mediation.json
+            /tmp/resonant-request.json
+            /tmp/resonant-voice-receipt.json
+            /tmp/resonant-voice-result.json
+            /tmp/resonant-pyramid-out/*.wav
+            data/COSMOS_RESONANT_ORIGIN_PRIME_PYRAMID_RENDER_FROZEN_CONTRACT.v1.json
