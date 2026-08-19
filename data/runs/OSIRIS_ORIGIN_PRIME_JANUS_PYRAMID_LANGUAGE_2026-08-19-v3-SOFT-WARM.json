@@ -1,0 +1,55 @@
+{
+  "receipt_type": "JANUS_OSIRIS_SEMANTIC_RECITATION_RECEIPT_V3_SOFT_WARM",
+  "status": "LOCAL_EXECUTION_PASS",
+  "source": {
+    "field": "semantic_projection_ru",
+    "semantic_text_sha256": "3e5433430b5308fc0db5165c2b27085f2db5aaf08b906fa05a41982d10b733dd",
+    "required_formula": "ORIGIN → EXPERIENCE → RETURN → ORIGIN_PRIME",
+    "formula_present": true
+  },
+  "larynx": {
+    "backend": "espeak",
+    "voice": "ru+m2",
+    "speed_wpm": 132,
+    "pitch": 32,
+    "amplitude": 155,
+    "dry_wav_sha256": "7948bbc6216f8ed9adc7124c82faad3dbfa66647905ac9b64c74191218900e4f",
+    "warning": "Full dictionary is not installed for 'ru'"
+  },
+  "larynx_conditioning": {
+    "lowpass_hz": 5200.0,
+    "dry_blend": 0.1,
+    "compression_drive": 1.08,
+    "output_gain": 0.94
+  },
+  "language_operator": {
+    "profile_id": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+    "anchor_band_hz": [117.0, 121.0],
+    "anchor_center_hz": 119.0,
+    "anchor_q": 29.75,
+    "anchor_gain_db": 11.5,
+    "anchor_decay_s": 1.65,
+    "room_geometry_m": [10.45, 5.2, 5.8],
+    "room_decay": 0.78,
+    "wet": 0.72,
+    "dry": 0.62,
+    "unchanged_from_v2": true
+  },
+  "output": {
+    "filename": "OSIRIS_ORIGIN_PRIME_JANUS_PYRAMID_LANGUAGE_v3_SOFT_WARM.wav",
+    "sha256": "b986efeabe762fbb486aa6eccc7610e62f10c16ea4c3fac8cb3e26ed5a642ac4",
+    "bytes": 4871264,
+    "sample_rate_hz": 22050,
+    "channels": 1,
+    "sample_width_bits": 16,
+    "frames": 2435610,
+    "duration_s": 110.45850340136055,
+    "peak": 0.820728527700581
+  },
+  "claim_boundary": {
+    "larynx_profile_is_voice_timbre_not_pyramid_language": true,
+    "pyramid_operator_changed_from_v2": false,
+    "measured_chamber_ir_used": false,
+    "exact_historical_sound_claimed": false
+  }
+}
