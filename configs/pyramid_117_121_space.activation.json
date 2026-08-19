@@ -5,7 +5,8 @@
   "input_contract": {
     "type": "ordinary_audio",
     "supported_reference_format": "mono PCM16 WAV",
-    "semantic_content_may_change": true,
+    "semantic_content_may_change": false,
+    "semantic_content_preserved": true,
     "acoustic_operator_must_remain": true
   },
   "anchor": {
@@ -32,9 +33,10 @@
     "DRY_WET_MIX",
     "SOFT_LIMIT"
   ],
-  "intended_effect": "Ordinary source audio is acoustically colored so the 117-121 Hz band becomes the dominant resonance while room-derived reflections add a chamber-like tail.",
+  "intended_effect": "Ordinary source audio is acoustically colored so the 117-121 Hz band becomes the dominant resonance while room-derived reflections add a chamber-like tail without replacing the source semantic carrier.",
   "hard_rules": [
     "DO_NOT_REPLACE_SOURCE_AUDIO_WITH_SYNTHETIC_TONES",
+    "PRESERVE_SOURCE_SEMANTIC_CONTENT",
     "117_121_HZ_IS_AN_ANCHOR_BAND_NOT_THE_ONLY_FREQUENCY",
     "KEEP_DRY_PATH_FOR_INTELLIGIBILITY",
     "SAME_OPERATOR_MUST_SUPPORT_FILE_TTS_AND_MIC_INPUT",
