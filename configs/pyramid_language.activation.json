@@ -1,0 +1,55 @@
+{
+  "schema": "janus.voice.pyramid_language_activation.v1",
+  "version": "0.2",
+  "enabled_capabilities": {
+    "json_record_sonification": true,
+    "offline_acoustic_filter": true,
+    "live_microphone_filter": true,
+    "habitat_reference_edge": true,
+    "speech_tts": false,
+    "reversible_json_audio_decode": false
+  },
+  "default_preset": "presets/great_pyramid_kings_chamber.example.json",
+  "json_record": {
+    "sample_rate_hz": 44100,
+    "tone_ms": 18.0,
+    "gap_ms": 2.0,
+    "alphabet_symbols": 16,
+    "canonical_json": "UTF8_SORTED_KEYS_COMPACT_NO_NAN",
+    "max_payload_bytes": 65536,
+    "automatic_playback": false
+  },
+  "modal_filter": {
+    "sample_rate_hz": 44100,
+    "mode_count": 8,
+    "minimum_model_frequency_hz": 35.0,
+    "maximum_model_frequency_hz": 900.0,
+    "decay_s": 0.32,
+    "wet": 0.72,
+    "dry": 0.62,
+    "output_gain": 0.85,
+    "model_status": "MODEL_BASED_MODAL_RESONATOR_APPROXIMATION"
+  },
+  "live_microphone": {
+    "mode_count": 6,
+    "blocksize": 512,
+    "explicit_start_required": true,
+    "network_io": false,
+    "recording": false,
+    "habitat_may_start": false,
+    "demihead_may_start": false
+  },
+  "habitat": {
+    "repository": "Hawkar-usls/Janus_Genesis",
+    "branch": "janus/habitat",
+    "edge": "habitat/state/VOICE_OF_JANUS_EDGE.json",
+    "write_back_default": "DENY"
+  },
+  "hard_rules": [
+    "MIC_CAPABILITY != MIC_PERMISSION",
+    "JSON_CONTENT != SHELL_COMMAND",
+    "RENDERED != PLAYED",
+    "SONIFICATION != REVERSIBLE_CODEC",
+    "MODEL_BASED_RECONSTRUCTION != MEASURED_HISTORICAL_SOUND"
+  ]
+}
