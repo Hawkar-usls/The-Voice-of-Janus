@@ -1,0 +1,118 @@
+name: Validate Voice of Janus
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run DemiHead mouth adapter self-test
+        run: python src/demihead_mouth_adapter.py --self-test
+
+      - name: Run standalone modal renderer smoke
+        run: |
+          python src/voice_of_janus.py \
+            presets/great_pyramid_kings_chamber.example.json \
+            --out /tmp/janus-voice-standalone.wav \
+            --receipt /tmp/janus-voice-standalone-receipt.json
+
+      - name: Run typed DemiHead to Voice render roundtrip
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          sys.path.insert(0, 'src')
+          from demihead_mouth_adapter import (
+              CONTRACT,
+              HEAD_REPOSITORY,
+              REQUEST_SCHEMA,
+              VOICE_REPOSITORY,
+              sha256_json,
+          )
+
+          core = {
+              'schema': REQUEST_SCHEMA,
+              'contract': CONTRACT,
+              'source': {
+                  'repository': HEAD_REPOSITORY,
+                  'source_revision': 'a' * 40,
+              },
+              'destination': {
+                  'repository': VOICE_REPOSITORY,
+                  'role': 'LOCAL_AUDIO_RENDERER',
+              },
+              'task': 'RENDER_PRESET',
+              'preset_id': 'GREAT_PYRAMID_KINGS_CHAMBER_EXAMPLE',
+              'output_label': 'demihead_ci_voice',
+              'control': {
+                  'explicit_audio_output_intent': True,
+                  'local_file_render_only': True,
+                  'network_io_permitted': False,
+                  'automatic_playback_permitted': False,
+                  'shell_execution_permitted': False,
+                  'arbitrary_path_permitted': False,
+                  'authority_delta': 0,
+                  'mass_effect_budget_delta': 0,
+              },
+          }
+          request = {
+              **core,
+              'request_id': sha256_json({'kind': 'JANUS_VOICE_REQUEST_ID', **core}),
+          }
+          request['request_sha256'] = sha256_json(request)
+          Path('/tmp/demihead-voice-request.json').write_text(
+              json.dumps(request, indent=2, sort_keys=True) + '\n',
+              encoding='utf-8',
+          )
+          PY
+
+          python src/demihead_mouth_adapter.py \
+            /tmp/demihead-voice-request.json \
+            --repo-root . \
+            --out-dir /tmp/janus-mouth-out \
+            > /tmp/demihead-voice-stdout.json
+
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          request = json.loads(Path('/tmp/demihead-voice-request.json').read_text(encoding='utf-8'))
+          receipt_path = Path('/tmp/janus-mouth-out/demihead_ci_voice.demihead-receipt.json')
+          wav_path = Path('/tmp/janus-mouth-out/demihead_ci_voice.wav')
+          engine_receipt_path = Path('/tmp/janus-mouth-out/demihead_ci_voice.engine-receipt.json')
+          assert receipt_path.is_file()
+          assert wav_path.is_file() and wav_path.stat().st_size > 44
+          assert engine_receipt_path.is_file()
+          receipt = json.loads(receipt_path.read_text(encoding='utf-8'))
+          assert receipt['schema'] == 'janus.voice.demihead_render_receipt.v1'
+          assert receipt['status'] == 'RENDERED_NOT_PLAYED'
+          assert receipt['request']['request_id'] == request['request_id']
+          assert receipt['request']['request_sha256'] == request['request_sha256']
+          assert receipt['control']['network_io_performed'] is False
+          assert receipt['control']['automatic_playback_performed'] is False
+          assert receipt['control']['authority_delta'] == 0
+          assert receipt['control']['mass_effect_budget_delta'] == 0
+          assert receipt['output']['wav_sha256'] == hashlib.sha256(wav_path.read_bytes()).hexdigest()
+          assert receipt['output']['engine_receipt_sha256'] == hashlib.sha256(engine_receipt_path.read_bytes()).hexdigest()
+          print('DEMIHEAD_TO_VOICE_ROUNDTRIP=PASS')
+          print('RENDERED_NOT_PLAYED=true')
+          PY
