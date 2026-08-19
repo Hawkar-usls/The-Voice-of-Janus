@@ -18,13 +18,13 @@
     "repository": "Hawkar-usls/Echo-Pyramid",
     "embedded_revision": "ESP32-r2",
     "contract": "config/voice_contract.json",
-    "contract_blob_sha": "f5efb2a10ae1186b64b23326dba22e3b38504bb7",
+    "contract_blob_sha": "d7a75317f82c5de4b5b5b8d2add7854dbbadac7f",
     "profile": "firmware/JanusPyramid117121Profile.h",
     "profile_blob_sha": "463e797c64a66650bb199a451e43195f6b1afd44",
     "dsp": "firmware/JanusPyramid117121DSP.h",
     "dsp_blob_sha": "bdd535d2a6289ab442fd35f45035549d425c8eaf",
     "composer": "tools/compose_swarm_firmware.py",
-    "composer_blob_sha": "eaf8371c6cbec4096aff551e55505ef3a666f04f",
+    "composer_blob_sha": "529eb25fc254385b1afedecf5477c8b1717eb2f8",
     "hardware_role": "PHYSICAL_VOICE_BODY"
   },
   "signal_contract": "ORDINARY_AUDIO_PCM -> SAME_SOURCE_AUDIO_WITH_PYRAMID_ACOUSTIC_COLORATION",
@@ -35,7 +35,8 @@
     "same_language_operator_for_tts_mic_music_and_bluetooth_pcm": true,
     "larynx_timbre_is_upstream_of_pyramid_language": true,
     "physical_body_does_not_define_tts_voice": true,
-    "language_v0_3_is_distinct_from_embedded_revision_esp32_r2": true
+    "language_v0_3_is_distinct_from_embedded_revision_esp32_r2": true,
+    "audio_continuity_has_priority_over_effect": true
   },
   "conformance": {
     "anchor_band_hz": [117.0, 121.0],
@@ -61,6 +62,13 @@
     "runtime_depth_percent": [0, 100],
     "runtime_depth_default_percent": 100,
     "realtime_budget_telemetry": true,
+    "audio_budget_failsafe": {
+      "default_enabled": true,
+      "trip_condition": "DSP_PROCESS_TIME_US >= PCM_BLOCK_BUDGET_US",
+      "consecutive_over_budget_blocks": 3,
+      "action": "DRY_BYPASS_UNTIL_EXPLICIT_PYR_ON_OR_REBOOT",
+      "canonical_language_parameters_mutated_on_trip": false
+    },
     "local_usb_ab_tuning": true,
     "local_usb_tuning_is_network_control": false,
     "serial_input_ownership_guard": "FAIL_CLOSED"
