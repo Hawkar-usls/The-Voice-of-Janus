@@ -16,11 +16,15 @@
   },
   "physical_implementation": {
     "repository": "Hawkar-usls/Echo-Pyramid",
+    "embedded_revision": "ESP32-r2",
     "contract": "config/voice_contract.json",
-    "contract_blob_sha": "78130263f19c4375d4d91e625c526631fee805ca",
+    "contract_blob_sha": "f5efb2a10ae1186b64b23326dba22e3b38504bb7",
     "profile": "firmware/JanusPyramid117121Profile.h",
-    "profile_blob_sha": "1a411abe9661ad4812acca0a5996d7587a79b5e4",
+    "profile_blob_sha": "463e797c64a66650bb199a451e43195f6b1afd44",
     "dsp": "firmware/JanusPyramid117121DSP.h",
+    "dsp_blob_sha": "bdd535d2a6289ab442fd35f45035549d425c8eaf",
+    "composer": "tools/compose_swarm_firmware.py",
+    "composer_blob_sha": "eaf8371c6cbec4096aff551e55505ef3a666f04f",
     "hardware_role": "PHYSICAL_VOICE_BODY"
   },
   "signal_contract": "ORDINARY_AUDIO_PCM -> SAME_SOURCE_AUDIO_WITH_PYRAMID_ACOUSTIC_COLORATION",
@@ -30,7 +34,8 @@
     "dry_path_preserved": true,
     "same_language_operator_for_tts_mic_music_and_bluetooth_pcm": true,
     "larynx_timbre_is_upstream_of_pyramid_language": true,
-    "physical_body_does_not_define_tts_voice": true
+    "physical_body_does_not_define_tts_voice": true,
+    "language_v0_3_is_distinct_from_embedded_revision_esp32_r2": true
   },
   "conformance": {
     "anchor_band_hz": [117.0, 121.0],
@@ -43,7 +48,22 @@
     "room_decay": 0.78,
     "wet": 0.72,
     "dry": 0.62,
-    "embedded_variation": "Echo-Pyramid keeps the anchor path at 44.1 kHz and evaluates the room-tail at 11.025 kHz to bound SRAM while preserving modeled delay times."
+    "embedded_variation": {
+      "anchor_path_sample_rate_hz": 44100,
+      "room_tail_sample_rate_hz": 11025,
+      "room_tail_decimation": 4,
+      "delay_storage": "PCM16_STATIC",
+      "delay_bytes": 3466,
+      "source_delay_damping": 0.22,
+      "embedded_delay_damping": 0.00234256,
+      "damping_transform": "d_embedded = d_source^4"
+    },
+    "runtime_depth_percent": [0, 100],
+    "runtime_depth_default_percent": 100,
+    "realtime_budget_telemetry": true,
+    "local_usb_ab_tuning": true,
+    "local_usb_tuning_is_network_control": false,
+    "serial_input_ownership_guard": "FAIL_CLOSED"
   },
   "claim_boundary": "MODEL_BASED_117_121_HZ_ANCHORED_EFFECT; NOT_A_MEASURED_CHAMBER_IR"
 }
