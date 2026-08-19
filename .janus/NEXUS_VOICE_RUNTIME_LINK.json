@@ -1,0 +1,30 @@
+{
+  "schema": "janus.voice.nexus_runtime_link.v1",
+  "contract": "NEXUS_V2_7_LOCAL_NEURAL_VOICE_RUNTIME_FROZEN_CONTRACT",
+  "status": "IMPLEMENTED_CANDIDATE_PENDING_EXACT_HEAD_CI_CONFIRMATION",
+  "nexus_owner": "Hawkar-usls/Demi_Head",
+  "nexus_target_head": "VOICE_RUNTIME",
+  "nexus_handler": "tools/nexus_voice_handler.py",
+  "local_executor": "src/nexus_voice_runtime_adapter.py",
+  "canonical_recitation_runner": "src/semantic_recitation_v4.py",
+  "canonical_recitation_config": "configs/osiris_origin_prime_recitation.v4_neural_human.json",
+  "neural_larynx": {
+    "backend": "silero_v5_5_ru",
+    "model_relative_path": "models/v5_5_ru.pt",
+    "model_download_permitted": false,
+    "default_speaker": "aidar"
+  },
+  "language": {
+    "profile": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+    "activation": "configs/pyramid_117_121_space.activation.json",
+    "activation_blob_sha": "70016b9b1ad0ce2b20efd980f14859d66af0a7bd",
+    "semantic_content_preserved": true
+  },
+  "physical_body": {
+    "repository": "Hawkar-usls/Echo-Pyramid",
+    "role": "PHYSICAL_VOICE_BODY",
+    "automatic_handoff": false,
+    "explicit_runtime_authorization_required": true
+  },
+  "execution_law": "NEXUS_PREPARES; THE_VOICE_RENDERS; THE_PYRAMID_COLORS; THE_HUMAN_AUTHORIZES_PHYSICAL_OUTPUT."
+}
