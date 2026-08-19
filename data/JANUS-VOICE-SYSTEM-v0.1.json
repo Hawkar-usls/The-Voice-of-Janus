@@ -1,0 +1,60 @@
+{
+  "id": "JANUS-VOICE-SYSTEM-v0.1",
+  "version": "0.1",
+  "status": "BOOTSTRAP_ACTIVE",
+  "date": "2026-08-19",
+  "project": "The-Voice-of-Janus",
+  "repository": "Hawkar-usls/The-Voice-of-Janus",
+  "language_contract": {
+    "configuration": "JSON",
+    "instructions": "JSON",
+    "presets": "JSON",
+    "receipts": "JSON",
+    "runtime": "Python"
+  },
+  "purpose": "Transform explicit geometry and acoustic assumptions into traceable modal frequencies and deterministic audio renders, with optional later AI texture layers.",
+  "operator": "GEOMETRY -> MODE_SOLVER -> EVIDENCE_GATE -> PHYSICAL_MODAL_BANK -> OPTIONAL_CREATIVE_TRANSLATION -> WAV_RENDER -> PROVENANCE_RECEIPT",
+  "epistemic_rules": [
+    "METAPHOR != PHYSICS",
+    "PREDICTED_MODE != MEASURED_RESONANCE",
+    "STRUCTURAL_MODE != AIR_ACOUSTIC_MODE",
+    "AI_GENERATION != PRECISION_FREQUENCY_SYNTHESIS",
+    "CREATIVE_TRANSFORM_MUST_PRESERVE_ORIGINAL_HZ"
+  ],
+  "core_equation": {
+    "rectangular_room_mode": "f_pqr = (c/2)*sqrt((p/Lx)^2 + (q/Ly)^2 + (r/Lz)^2)",
+    "constraints": "p,q,r are non-negative integers and cannot all be zero"
+  },
+  "runtime_contract": {
+    "input": "one JSON preset",
+    "required_fields": [
+      "geometry_m.Lx",
+      "geometry_m.Ly",
+      "geometry_m.Lz"
+    ],
+    "outputs": [
+      "WAV render",
+      "JSON provenance receipt"
+    ],
+    "fail_closed_on": [
+      "missing dimensions",
+      "non-positive dimensions",
+      "invalid sample rate",
+      "invalid duration",
+      "zero usable modes"
+    ]
+  },
+  "development_path": [
+    "v0.1 rectangular modal solver + deterministic WAV renderer",
+    "v0.2 mode clustering + configurable Q/envelopes",
+    "v0.3 measured impulse-response ingestion and convolution",
+    "v0.4 material-loss and source/listener position model",
+    "v0.5 Stable Audio / generative texture bridge with provenance",
+    "v1.0 validated converter pipeline with tests and schema versioning"
+  ],
+  "provenance": {
+    "origin": "JANUS sound-converter discussion",
+    "upstream_registry_object": "JANUS-SOUND-CONVERTER-PYRAMID-RESONANCE-INSTRUCTION-v1.0",
+    "upstream_registry": "Hawkar-usls/janus-meta-registry"
+  }
+}
