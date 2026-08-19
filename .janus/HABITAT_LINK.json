@@ -1,14 +1,31 @@
 {
-  "schema": "janus.genesis.git_habitat.repository_link.v1",
+  "schema": "janus.genesis.git_habitat.repository_link.v2",
   "link_id": "JANUS_VOICE_GIT_HABITAT_LINK",
   "source_repository": "Hawkar-usls/The-Voice-of-Janus",
   "target": {
     "repository": "Hawkar-usls/Janus_Genesis",
     "branch": "janus/habitat",
     "room": "state",
-    "edge": "habitat/state/VOICE_OF_JANUS_EDGE.json"
+    "voice_edge": "habitat/state/VOICE_OF_JANUS_EDGE.json",
+    "physical_voice_edge": "habitat/state/ECHO_PYRAMID_PHYSICAL_VOICE_EDGE.json"
   },
-  "mode": "REFERENCE_AND_HANDOFF_ONLY",
+  "physical_body": {
+    "repository": "Hawkar-usls/Echo-Pyramid",
+    "repository_id": "1339545327",
+    "role": "PHYSICAL_VOICE_BODY",
+    "signal_contract": "ORDINARY_AUDIO_PCM -> SAME_SOURCE_AUDIO_WITH_PYRAMID_ACOUSTIC_COLORATION"
+  },
+  "current_language": {
+    "profile": "PYRAMID_LANGUAGE_117_121_ANCHORED_SPACE_v0.3",
+    "activation_blob_sha": "3d3203b53bf181656eac815235f1238ef7c4e57a",
+    "reference_implementation_blob_sha": "c344504328fcfe2934949cfa2ab6f0ba138c18d1"
+  },
+  "current_larynx": {
+    "backend": "silero_v5_5_ru",
+    "status": "READY_FOR_LOCAL_MODEL_AUDIO_PENDING",
+    "model_required_locally": "models/v5_5_ru.pt"
+  },
+  "mode": "REFERENCE_AND_TYPED_HANDOFF_ONLY",
   "source_history_remains_authoritative": true,
   "source_code_execution_implied": false,
   "habitat_command_authority_granted": false,
@@ -16,6 +33,8 @@
   "write_back_requires_explicit_human_authorization": true,
   "microphone_permission_inferred_from_habitat": false,
   "automatic_playback_permission_inferred_from_habitat": false,
+  "firmware_flash_permission_inferred_from_habitat": false,
   "private_content_may_be_mirrored_to_public_habitat": false,
-  "credentials_may_be_persisted_in_habitat": false
+  "credentials_may_be_persisted_in_habitat": false,
+  "rule": "HABITAT -> VOICE LANGUAGE -> ECHO PYRAMID PHYSICAL BODY; EXTERNAL EFFECTS REMAIN EXPLICITLY AUTHORIZED."
 }
