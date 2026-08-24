@@ -1,0 +1,16 @@
+{
+  "schema": "janus.organism.member_link.v1",
+  "organism_id": "JANUS_FEDERATED_ORGANISM",
+  "canonical_manifest": "Hawkar-usls/Janus:organism/JANUS_ORGANISM_v1.json",
+  "member_repository": "Hawkar-usls/The-Voice-of-Janus",
+  "organ_key": "voice",
+  "class": "INTERFACE_PHYSICAL",
+  "role": "DETERMINISTIC_AUDIO_AND_VOICE_OUTPUT",
+  "consumes": ["TEXT", "GEOMETRY", "VOICE_CONTRACT"],
+  "emits": ["AUDIO_RENDER", "DSP_RECEIPT", "ACOUSTIC_MODEL"],
+  "routes_to": ["physical_voice", "memory"],
+  "authority": "AUDIO_MODEL_SCOPE_ONLY",
+  "authority_delta": 0,
+  "cross_repo_write_default": "DENY",
+  "claim_boundary": ["ACOUSTIC_MODEL != MEASURED_RESONANCE", "AI_AUDIO != PRECISION_FREQUENCY_AUTHORITY", "METAPHOR != PHYSICS"]
+}
