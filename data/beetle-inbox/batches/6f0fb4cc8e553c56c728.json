@@ -1,0 +1,1092 @@
+{
+  "batch_id": "6f0fb4cc8e553c56c728",
+  "claim_ceiling": "DISCOVERY_MEMORY_ONLY__TARGET_REPO_MUST_VERIFY_INDEPENDENTLY",
+  "created_at": "2026-09-11T03:36:14.620509Z",
+  "items": [
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "fce238d2641da8e08b1a061e",
+      "direction_id": "ocean_reader::COUNTEREVIDENCE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:36:14.605443Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_published": "2025-09-19T10:46:59Z",
+      "source_updated": "2025-09-19T10:46:59Z",
+      "summary": "Routing-driven timely data collection in Underwater Acoustic Sensor Networks (UASNs) is crucial for marine environmental monitoring, disaster warning and underwater resource exploration, etc. However, harsh underwater conditions, including high delays, limited bandwidth, and dynamic topologies - make efficient routing decisions challenging in UASNs. In this paper, we propose a smart interrupted routing scheme for UASNs to address dynamic underwater challenges. We first model underwater noise influences from real underwater routing features, e.g., turbulence and storms. We then propose a Software-Defined Networking (SDN)-based Interrupted Software-defined UASNs Reinforcement Learning (ISURL) framework which ensures adaptive routing through dynamically failure handling (e.g., energy depletion of sensor nodes or link instability) and real-time interrupted recovery. Based on ISURL, we propose MA-MAPPO algorithm, integrating multi-head attention mask mechanism with MAPPO to filter out infeasible actions and streamline training. Furthermore, to support interrupted data routing in UASNs, we introduce MA-MAPPO_i, MA-MAPPO with interrupted policy, to enable smart interrupted routing decision in UASNs. The evaluations demonstrate that our proposed routing scheme achieves exact underwater data routing decision with faster convergence speed and lower routing delays than existing approaches.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Smart Interrupted Routing Based on Multi-head Attention Mask Mechanism-Driven MARL in Software-defined UASNs",
+      "url": "https://arxiv.org/abs/2509.15856v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "e38bd8feb1baa7b1b08db38a",
+      "direction_id": "ocean_reader::COUNTEREVIDENCE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:36:14.605468Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_published": "2025-08-11T03:20:36Z",
+      "source_updated": "2025-08-11T03:20:36Z",
+      "summary": "This paper investigates the fair-effective communication and robustness in imperfect and energy-constrained underwater acoustic sensor networks (IC-UASNs). Specifically, we investigate the impact of unexpected node malfunctions on the network performance under the time-varying acoustic channels. Each node is expected to satisfy Quality of Service (QoS) requirements. However, achieving individual QoS requirements may interfere with other concurrent communications. Underwater nodes rely excessively on the rationality of other underwater nodes when guided by fully cooperative approaches, making it difficult to seek a trade-off between individual QoS and global fair-effective communications under imperfect conditions. Therefore, this paper presents a SEmi-COoperative Power Allocation approach (SECOPA) that achieves fair-effective communication and robustness in IC-UASNs. The approach is distributed multi-agent reinforcement learning (MARL)-based, and the objectives are twofold. On the one hand, each intelligent node individually decides the transmission power to simultaneously optimize individual and global performance. On the other hand, advanced training algorithms are developed to provide imperfect environments for training robust models that can adapt to the time-varying acoustic channels and handle unexpected node failures in the network. Numerical results are presented to validate our proposed approach.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Achieving Fair-Effective Communications and Robustness in Underwater Acoustic Sensor Networks: A Semi-Cooperative Approach",
+      "url": "https://arxiv.org/abs/2508.07578v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "3061e86669e34d68bda41755",
+      "direction_id": "ocean_reader::COUNTEREVIDENCE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:36:14.605482Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_published": "2023-06-29T19:07:17Z",
+      "source_updated": "2024-09-13T21:29:32Z",
+      "summary": "Fast and reliable state estimation and tracking are essential for real-time situation awareness in Cyber-Physical Systems (CPS) operating in tactical environments or complicated civilian environments. Traditional centralized solutions do not scale well whereas existing fully distributed solutions over large networks suffer slow convergence, and are vulnerable to a wide spectrum of communication failures. In this paper, we aim to speed up the convergence and enhance the resilience of state estimation and tracking for large-scale networks using a simple hierarchical system architecture. We propose two ``consensus + innovation'' algorithms, both of which rely on a novel hierarchical push-sum consensus component. We characterize their convergence rates under a linear local observation model and minimal technical assumptions. We numerically validate our algorithms through simulation studies of underwater acoustic networks and large-scale synthetic networks.",
+      "tags": [
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Fast and Robust State Estimation and Tracking via Hierarchical Learning",
+      "url": "https://arxiv.org/abs/2306.17267v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "68e58db67c95bbb68edc0226",
+      "direction_id": "ocean_reader::COUNTEREVIDENCE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:36:14.605499Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_published": "2021-08-11T06:50:59Z",
+      "source_updated": "2021-08-14T12:20:58Z",
+      "summary": "The underwater acoustic channel is one of the most challenging communication channels. Due to periodical tidal and daily climatic variation, underwater noise is periodically fluctuating, which result in the periodical changing of acoustic channel quality in long-term. Also, time-variant channel quality leads to routing failure. Routing protocols with acoustic channel estimation, namely underwater channel-aware routing protocols are recently proposed to maintain the routing performance. However, channel estimation algorithms for these routing protocols are mostly linear and rarely consider periodicity of acoustic channels. In this paper, we introduce acoustic channel estimation based on nearest neighbor regression for underwater acoustic networks. We extend nearest neighbor regression for SNR (Signal-to-Noise Ratio) time series prediction, providing an outstanding prediction accuracy for intricately periodical and fluctuating received SNR time series. Moreover, we propose a quick search algorithm and use statistical storage compression to optimize the time and space complexity of the algorithm. In contrast with linear methods, this algorithm significantly improves channel prediction accuracy (over three times at most) on both simulation and sea trial data sets. With this channel estimation method, we then propose a Depth-Based Channel-Aware Routing protocol (DBCAR). Taking advantage of depth-greedy forwarding and channel-aware reliable communication, DBCAR has an outstanding network performance on packet delivery ratio, average energy consumption and average transmission delay which is validated through extensive simulations.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "A Channel-Aware Routing Protocol With Nearest Neighbor Regression For Underwater Sensor Networks",
+      "url": "https://arxiv.org/abs/2108.05057v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "d29113fd713fe6818c267df8",
+      "direction_id": "ocean_reader::COUNTEREVIDENCE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:36:14.605514Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_published": "2021-06-30T12:58:32Z",
+      "source_updated": "2022-03-05T01:07:25Z",
+      "summary": "This article focuses on feature-based underwater localization and navigation for autonomous underwater vehicles (AUVs) using 2D imaging sonar measurements. The sparsity of underwater acoustic features and the loss of elevation angle in sonar images may introduce wrong feature matches or insufficient features for optimization-based underwater localization (i.e. under-constrained/degeneracy cases). This motivates us to propose a novel inertial-aided sliding window optimization framework to improve the estimation accuracy and the robustness to front-end outliers. Concretely, we first discriminate under-constrained/ well-constrained sonar frames and define sonar keyframes (SKFs) based on the Jacobian matrix derived from odometry and sonar measurements. To utilize the past well-constrained SKFs mostly, we design a size-adjustable windowed back-end optimization scheme based on singular values. We also prove that the landmark triangulation failure (navigation problem) caused by sonar motion can be solved in 2D scenes. Comparative simulation and evaluation on a public dataset show the proposed method outperforms the existing ones in pose estimation and robustness even without loop closure and also ensures the real-time performance for online applications.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Robust Inertial-aided Underwater Localization based on Imaging Sonar Keyframes",
+      "url": "https://arxiv.org/abs/2106.16032v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "5dad8bbe701e4045f330bd86",
+      "direction_id": "ocean_reader::COUNTEREVIDENCE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:36:14.605530Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "arxiv",
+      "source_published": "2000-08-15T13:06:36Z",
+      "source_updated": "2000-08-15T13:06:36Z",
+      "summary": "We are currently operating the front end of the accelerator production of tritium (APT) accelerator, a 7 MeV radio frequency quadrapole (RFQ) using three, 1.2 MW CW klystrons. These klystrons are required and designed to dissipate the full beam power in the collector. The klystrons have less than 1500 operational hours. One collector has failed and all collectors are damaged. This paper will discuss the damage and the difficulties in diagnosing the cause. The collector did not critically fail. Tube operation was still possible and the klystron operated up to 70% of full beam power with excellent vacuum. The indication that finally led us to the collector failure was variable emission. This information will be discussed. A hydrophonic system was implemented to diagnose collector heating. The collectors are designed to allow for mixed-phase cooling and with the hydrophonic test equipment we are able to observe: normal, single-phase cooling, mixed-phase cooling, and a hard boil. These data will be presented. The worst case beam profile from a collector heating standpoint is presented. The paper will also discuss the steps taken to halt the collector damage on the remaining 350 MHz klystrons and design changes that are being implemented to correct the problem.",
+      "tags": [
+        "physics.acc-ph"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Collector Failures on 350 MHz, 1.2 MW CW Klystrons at the Low Energy Demonstration Accelerator (LEDA)",
+      "url": "https://arxiv.org/abs/physics/0008069v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "a69785345d5d1f21f0a2f894",
+      "direction_id": "ocean_reader::COUNTEREVIDENCE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [COUNTEREVIDENCE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "failure"
+      ],
+      "mirror_lens": "COUNTEREVIDENCE",
+      "routed_at": "2026-09-11T03:36:14.605545Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.2917,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "Doucette&rsquo;s Thin Reliability argues that classical reliability hides a critical assumption: that local component failure equals system failure. That holds only for a simple nonrepairable item or a series system. In redundant, repairable, software-bearing, phased, or safety-critical systems, a local event can occur while required function continues, or required function can be lost through a route no single event displays. The book reframes reliability as reachability. A system is reliable when instability, wear, latent defects, dependence, or repair imperfection remain &ldquo;thin&rdquo;&mdash;confined away from a named failure set over a stated horizon. A thick system is one where such mechanisms have a route into failure. The book insists every claim name its state space, evolution, initial conditions, projection, failure set, horizon, model class, and predicate. It distinguishes failure rate, failure intensity, system hazard, and visit intensity. Structure matters: series gives immediate reach; parallel and k-out-of-n defer it. Common-cause shocks, coverage holes, failed switches, latent software defects, and phase boundaries open hidden routes the block diagram does not show. Repair restores margin but does not erase first-passage history. Availability is occupancy after return; reliability is first-hit probability. High availability can coexist with likely first failure on a mission. Testing must match lab and field claims; a test cannot see a rate whose source state it never occupies. An item test cannot validate a system claim. The book does not replace reliability mathematics; it clarifies what existing calculations mean. It concludes that reliability is not a property of hardware but of a well-formed claim. Thin reliability is local occurrence without operational reach. Thick reliability is coupled transport into the failure set. The practical goal is to keep chaos thin, close corridors, raise coverage, preserve repair gaps, and monitor margin. It treats phased missions, imperfect repair, and latent coverage as recurrent initial-law problems, not as new life distributions.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Thin Reliability: Chaos, Reachability, and the Architecture of Failure",
+      "url": "https://zenodo.org/records/22700627"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "dd2e6dbf3a69c4448ea45eb4",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605671Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_published": "2026-07-15T04:06:14Z",
+      "source_updated": "2026-07-15T04:06:14Z",
+      "summary": "The chiral zeroth Landau levels (LLs) constitute topologically protected bulk states that enable robust control of acoustic wave propagation. Given the central role of underwater acoustics in marine engineering, realizing such Landau-level physics in underwater acoustic systems is highly desirable. Nevertheless, existing studies have primarily been limited to airborne acoustic systems, and the implementation of chiral zeroth LLs in underwater acoustics remains a challenge due to the unavoidable fluid-solid interactions. In this study, we realize two kinds of chiral LLs in an open underwater spoof surface acoustic wave (SSAW) platform by introducing two perpendicular in-plane artificial pseudomagnetic fields (PMFs), oriented along the x and y directions, respectively, and reveal that scalar acoustic fields in water and vectorial elastic vibrations in solids can be jointly manipulated within a unified framework. Specifically, by strategically opening bandgaps at the Dirac points, position-dependent effective mass terms are introduced into the Dirac Hamiltonians, thereby synthesizing two in-plane PMFs. This results in the emergence of chiral LLs, which is confirmed both numerically and experimentally. The unidirectional propagation of the chiral LLs and their robustness against defects are also demonstrated. In addition, we achieve flexible manipulation of underwater ultrasonic energy carried by SSAWs, including beam splitting and arbitrary wave steering. Dual-band chiral LLs are also observed in small-scale underwater topological metamaterials. Our work provides a new route toward SSAW-based underwater ultrasonic control, opening opportunities for multiband underwater acoustic signal processing and detection, as well as underwater acoustic energy harvesting.",
+      "tags": [
+        "physics.app-ph"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Chiral Landau levels induced by two in-plane pseudomagnetic fields in underwater acoustic metamaterials",
+      "url": "https://arxiv.org/abs/2607.13426v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "da8d1cb9fd55206e3b5bc88a",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "benchmark",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605684Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 13.5,
+      "source": "arxiv",
+      "source_published": "2026-06-27T15:45:54Z",
+      "source_updated": "2026-07-07T17:35:02Z",
+      "summary": "Machine learning for underwater acoustics is constrained by the scarcity of publicly available labeled datasets. In contrast to air-acoustic domains, where large benchmarks enable rapid model development, underwater datasets are typically small and limited in acoustic diversity, restricting robust model training and cross-domain generalization. To help address this gap, we introduce a curated underwater audio dataset derived from an open-source maritime sound archive. The dataset contains over one thousand labeled audio segments across eight biologically and mechanically relevant acoustic classes, providing an additional resource for training models in data-limited underwater environments. Additionally, we establish a lightweight Convolutional Neural Network (CNN) baseline and propose a margin-enhanced loss with feature alignment to mitigate class confusion arising from data imbalance, acoustic similarity, and cross-domain mismatch. While the baseline achieves 96.35% in-domain accuracy, evaluation on ShipsEar reveals substantial domain shift; the proposed feature alignment improve zero-shot ship detection by 42.60%, demonstrating stronger robustness under distribution mismatch. We further release a transparent curation pipeline and reproducible benchmark to support future research on imbalance mitigation, domain adaptation, and data-efficient underwater acoustic classification.",
+      "tags": [
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Underwater Source Detection and Classification for Signal-based Surveillance: Audio Dataset Curation and Cross-Domain Evaluation",
+      "url": "https://arxiv.org/abs/2606.28988v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "66de83a40218c7eef223672a",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "hydrophone",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605703Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 13.5417,
+      "source": "arxiv",
+      "source_published": "2026-06-21T04:58:55Z",
+      "source_updated": "2026-06-21T04:58:55Z",
+      "summary": "Researchers tag and track marine animals to study migration patterns, human impacts on behavior, and behavioral shifts due to climate change. Accurate data collection often requires tagging individual animals to collect spatio-temporal state estimates of the animal's geo-position and depth. Acoustic transmitters are prominent due to their continuous communication without requiring retrieval or surfacing to collect data. These transmitters emit underwater acoustic pulses that can be detected by hydrophones. However, the frequent movement of aquatic animals results in high data loss when the animal moves out of the detection range of a stationary hydrophone. Autonomous underwater vehicle (AUV) systems offer a solution for localizing transmitters with higher resolution over longer periods of time. Such systems previously deployed have often required multiple hydrophones mounted on a large frame carried by the AUV. This increases drag, limiting the speed at which the AUV can track highly mobile animals. This work provides an alternative by equipping multiple AUVs with a single compact hydrophone payload. A particle filter algorithm equipped with a hidden Markov model (HMM) behavioral motion model fuses measurements from multiple AUVs to estimate the transmitter's position. Real-world data shows a root mean square error (RMSE) of approximately 10 meters for short-term deployments, and a larger simulated dataset shows an RMSE of approximately 15 meters for longer deployments over a larger area. The HMM fit to historical animal movement data outperforms a generic velocity motion model, and both outperform a baseline random walk motion model.",
+      "tags": [
+        "cs.RO"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Multi-AUV Marine Life Tracking with Single Hydrophone Payloads via a Hidden Markov Model Equipped Particle Filter",
+      "url": "https://arxiv.org/abs/2606.22335v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "98e4659b40644905f3c0138e",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "hydrophone"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605718Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.7917,
+      "source": "arxiv",
+      "source_published": "2026-06-08T13:50:20Z",
+      "source_updated": "2026-06-08T13:50:20Z",
+      "summary": "Accurate acoustic modelling of the skull is essential for simulation-guided transcranial focused ultrasound (tFUS), but commonly used skull parameterisation strategies differ in complexity and reported accuracy. This study experimentally compared five k-Wave skull models: two voxel-wise linear mapping models, two three-layer models, and one single-layer fixed-parameter model. Nineteen regions of interest from five historical and two Thiel-embalmed human skulls were tested at 220 kHz, 680 kHz, and 1000 kHz. Bowl-surface source fields were reconstructed using acoustic holography, and simulated intracranial pressure fields were benchmarked against needle-hydrophone measurements. Across frequencies, mean peak-pressure errors ranged from 20% to 31%, whereas intensity errors reached 41% to 77%. Errors in -6 dB focal volume ranged from 11% to 67%, and focal-position discrepancies were typically several millimetres. Simulations generally predicted smaller insertion losses than measured, indicating a tendency to underestimate skull-related attenuation and overestimate transmitted intracranial exposure. The linear mapping model with fixed attenuation gave the lowest frequency-averaged pressure error, but no model showed a consistent advantage across all metrics. These results show that current skull models can reproduce gross intracranial beam patterns while retaining substantial quantitative uncertainty in exposure, focal coverage, and target localisation.",
+      "tags": [
+        "physics.med-ph"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Experimental Validation of Skull Acoustic Modelling Strategies for Transcranial Focused Ultrasound Simulation: A Cross-Comparison Study",
+      "url": "https://arxiv.org/abs/2606.09497v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "6355602f7d6a4ec4c79e4fed",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "ablation",
+        "baseline",
+        "benchmark",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605744Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 14.8333,
+      "source": "arxiv",
+      "source_published": "2026-06-08T11:13:05Z",
+      "source_updated": "2026-06-08T11:13:05Z",
+      "summary": "Modulation recognition systems rely on heterogeneous signal representations. 2D signal-image modalities such as time-frequency and cyclostationary maps capture structural patterns, while 1D statistical descriptors such as higher-order power spectra encode complementary cues. Under distribution shift, these modalities degrade unevenly, making robust fusion a central challenge for practical deployment. Progress is further limited by the lack of a unified evaluation protocol that systematically separates different shift types. This paper addresses both challenges through a joint benchmark-and-model study in underwater acoustic modulation recognition. UAMR-ShiftBench is the first benchmark to jointly cover in-distribution, low-SNR, unseen-environment, unseen-communication-parameter, and measured sea-trial evaluation under a single matched protocol, with two independent real-world subsets collected during two sea-trial campaigns conducted in March and November in the South China Sea. SCP-TriCA fuses STFT, cyclostationary, and P2/P4 (second- and fourth-order power spectra) modalities hierarchically: the two 2D modalities are first aligned through bidirectional cross-attention, and the 1D statistical modality is then incorporated through a sample-adaptive selective gate. On UAMR-ShiftBench, SCP-TriCA achieves 95.33% in-distribution accuracy and 74.59% simulated OOD average, outperforming the strongest baseline by 5.12 percentage points, and reaches 91.14% and 94.86% on the two sea-trial subsets, exceeding the best baseline by 15.71 and 23.00 percentage points respectively. Ablation results confirm that the gains stem from modality complementarity and the hierarchical fusion design. Code and models are available at https://github.com/ronglaiqian/UAMR-ShiftBench.",
+      "tags": [
+        "eess.AS",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Heterogeneous 2D/1D Signal Representation Fusion for Underwater Acoustic Modulation Recognition Under Distribution Shift",
+      "url": "https://arxiv.org/abs/2606.23702v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "1c7ebf1d9563b038f2d4cdd8",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605759Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.125,
+      "source": "arxiv",
+      "source_published": "2026-06-01T14:49:38Z",
+      "source_updated": "2026-06-05T18:03:07Z",
+      "summary": "Underwater acoustic classification has a wide array of oceanic applications, but faces challenges due to an increasingly complex acoustic environment. Waveform and spectrogram representations have been primarily used as acoustic data features for classification tasks in this domain. Spectrograms model harmonic dependencies, but these reduced representations can filter out acoustic features relevant for discrimination. While phase information from the waveform allows full characterization of the signal, the original waveform can be noisy and complex, rendering this representation difficult for models to process directly. This paper proposes a dual-encoder neural architecture to simultaneously process acoustic waveforms and spectrograms, leveraging pre-trained backbones and parameter-efficient fine-tuning modules, enabling a domain adaptation. To combine these adapted branches, a novel differentiable fuzzy aggregation mechanism based on the Choquet integral is introduced to balance the temporal and spectral representations. This fusion strategy not only yields higher classification accuracy but also provides interpretability. Specifically, by analyzing the learned fuzzy measures, insights are revealed about class-specific shifts in the network's representation reliance. By dynamically shifting attention to the representation least corrupted by potential asymmetric channel distortions, the proposed gating mechanism mitigates the non-stationary challenges of the underwater environment. Evaluations on the DeepShip and ShipsEar datasets demonstrate that the proposed architecture achieves classification improvements over independent single-encoder baselines, while simultaneously restricting the trainable parameter space. This mitigates the risk of overfitting on limited acoustic datasets while alleviating the computational costs associated with fully fine-tuning foundation models.",
+      "tags": [
+        "cs.SD",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Parameter-efficient Dual-encoder Architecture with Differentiable Choquet Integral Fusion for Underwater Acoustic Classification",
+      "url": "https://arxiv.org/abs/2606.02341v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "a78b8d094d0fc6c5d24b826b",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "control",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605774Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.0833,
+      "source": "arxiv",
+      "source_published": "2026-05-22T12:18:26Z",
+      "source_updated": "2026-05-22T12:18:26Z",
+      "summary": "This paper presents a modular software architecture that enables environmental-aware coordination of heterogeneous Autonomous Underwater Vehicles (AUVs) to improve underwater acoustic connectivity. The architecture combines a Robot Operating System 2 application layer with the DESERT Underwater communication framework through the rmw_desert middleware, and integrates a Robot Operating System 1 bridge to ensure interoperability with legacy vehicle front-seat controllers. This design enables fine-grained, cross-layer configurability of the communication stack and supports onboard processing of environmental measurements to inform adaptive communication behaviors. As a representative use case, this architecture is used to implement a lightweight depth-optimization strategy that exploits environmental awareness and AUV mobility to improve acoustic link performance. The complete software stack is validated through sea trials conducted off the Gulf of La Spezia in littoral water with an average depth of approximately 100m using a deployment involving three AUVs with distinct operational roles. Experimental results indicate that depth-adaptive repositioning yields measurable gains in packet reception at horizontal separation of approximately 1km, while differences are negligible at shorter ranges where the received signal energy remains above demodulation thresholds. Beyond link-level performance the sea trials confirm the feasibility, modularity, and practical deployability of the proposed architecture on existing AUV platforms.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Sea Trial Validation of the ROS-DESERT Middleware with Autonomous Underwater Vehicles",
+      "url": "https://arxiv.org/abs/2605.23553v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "122dd03fa0b42c488916595b",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605788Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_published": "2026-09-03",
+      "source_updated": null,
+      "summary": "Final artifact for the OOPSLA 2026 paper \"Symbolic Basic Block Profiling for Machine Learning Kernels\", updated after artifact evaluation. It contains the Linux/amd64 Docker image (symbolic-image-linux-amd64.tar.gz) with the symbolic profiler, the LLVM/TVM harness for all 78 kernels, the measurements behind the paper figures and tables, plotting scripts, experiment drivers, and scripts to rebuild the image from source; and the artifact documentation (artifact-doc.md). The SHA-256 checksum of the image archive is aa382229f5877e182515eb0641a6f7d2ce692b2bc8942edab21fea176cd41418 (MD5 cfbffe6211b9c5ec4ef03bafdfa91907). License and Provenance: Authors' code, MIT: trip_counter/, instrGen/, getBBCount/, symb_form_tests/ (benchmark, overhead, characterize, compare, audit drivers), plus Containerfile, Containerfile.dev, .devcontainer/, scripts/00_setup/, scripts/99_benchmark/. AI-generated, no copyright claimed, dedicated under CC0 1.0 where any rights exist: all of tvm-comparison/; the artifact driver and figure scripts run-all.sh, build-and-run-all.sh, scripts/draw_figures.sh, scripts/draw_tvm_figures.sh, scripts/run_overhead_and_draw.sh, scripts/run_tvm_and_draw.sh, scripts/regenerate_characterize.sh, and scripts/build_docker_artifact.sh; AI-assisted edits to the plotting scripts symb_form_tests/tvm-ops/exec_overhead.py, init_overhead.py, speedup_show.py, and speedup_range.py; and the documentation files README.md and artifact-doc.md, drafted with AI assistance. Third-party: vendor/tvm/ (Apache 2.0 with its 3rdparty/), vendor/z3/ (MIT, Microsoft), and the Debian, LLVM/Clang, and Python packages in the image. raw-data/ measurements: collected by the authors, provided under the same MIT terms. The preprint of the paper can be found at https://arxiv.org/abs/2608.20605 .",
+      "tags": [],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Symbolic Basic Block Profiling for Machine Learning Kernels (Artifact)",
+      "url": "https://zenodo.org/records/22282934"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "7b4682836c3f786cac7250a1",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605801Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.6667,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "This dataset accompanies the manuscript \"MD Ensemble Generation for Virtual Screening of a Flexible Viral Protein Oligomerization Domain\", submitted to Molecular Informatics (Wiley). Target. The Nipah virus phosphoprotein oligomerization domain (chain C of PDB 9FUX, residues 480&ndash;595, 116 residues), simulated as an isolated monomer. Contents. 8,112 files, 0.94 GB uncompressed: ten numbered directories plus MANIFEST.json, README.md and REPRODUCING.md at the top level. README.md documents every directory and REPRODUCING.md states what can and cannot be regenerated from these files. - 01_md_input_files &mdash; AMBER input files and topologies for the four production runs. (51 files, 112.6 MB) - 02_cluster_representatives &mdash; The ten cluster representatives obtained by hierarchical agglomerative clustering of 60,000 frames (three ff19SB/OPC replicas at 200 ns), with the cpptraj clustering statistics. (34 files, 256.8 MB) - 03_bic_optimization &mdash; Gaussian mixture diagnostics on the first ten principal components of the Ca coordinate space for k = 2-25, with the script that produced them. (2 files, 0.0 MB) - 04_docking_receptors &mdash; Receptors as docked. (36 files, 2.8 MB) - 05_screening_results &mdash; The docking score matrices for both ensembles and every analysis derived from them: the variance decomposition, the robustness classification before and after removing the per-structure component, the inter-method concordance, the diversity comparison, the sampling diagnostics, the regional decomposition, the secondary-structure analysis and the trajectory statistics. (38 files, 10.1 MB) - 06_analysis_scripts &mdash; Every script that produced a number in the paper, including the cpptraj inputs and the benchmark preparation scripts. (82 files, 0.6 MB) - 07_figure_scripts &mdash; The scripts that generate every figure of the article and its Supporting Information from the result files in this deposit. (5 files, 0.0 MB) - 08_compound_library &mdash; The screening library used for this target, and not the benchmark compounds, which are named in 10_external_benchmark/compound_index.tsv rather than redistributed. (7,663 files, 18.3 MB) - 09_k_sensitivity &mdash; The clustering, receptor preparation and full-library screening repeated at k = 5, 15 and 20, which establishes that the structure effect does not depend on the number of cluster representatives for k of ten or more. (93 files, 513.9 MB) - 10_external_benchmark &mdash; The benchmark on five DUD-E targets with three ensemble types per target, and the redocking control. (105 files, 44.1 MB) Reproducibility. The deterministic analyses reproduce from the files here. Two stages are not bitwise reproducible: AutoDock Vina was run without a fixed seed, and the molecular dynamics used ig = -1. The production trajectories are not included because of their size; the cluster representatives derived from them are. Computation. The docking calculations were carried out on the supercomputer Fugaku through the HPCI System Research Project (Project ID: hp250595).",
+      "tags": [
+        "conformational sampling",
+        "ensemble docking",
+        "molecular dynamics",
+        "virtual screening"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "MD Ensemble Generation for Virtual Screening of a Flexible Viral Protein Oligomerization Domain",
+      "url": "https://zenodo.org/records/22699689"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "d26665094e321f258e66b25c",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline",
+        "control"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605816Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.625,
+      "source": "zenodo",
+      "source_published": "2026-09-01",
+      "source_updated": null,
+      "summary": "Among the available anesthetic techniques, spinal anesthesia remains the preferred method for cesarean section procedures, because of its rapid onset and safety profile; however, it is frequently associated with hypotension that may compromise maternal and fetal stability. This study was conducted to assess the influence of lower limb elevation as a non-pharmacological intervention on blood pressure following spinal anesthesia. A one-group pretest-posttest quasi-experimental design was implemented to evaluate 90 cesarean section patients who met the inclusion criteria. Blood pressure values, including systolic and diastolic parameters, were obtained at baseline and at the 5th, 10th, and 15th minutes after spinal anesthesia, and the data analysis using paired t-tests indicated significant increases in systolic and diastolic blood pressure over time, with mean systolic pressure rising from 87.59 mmHg to 97.89 mmHg and mean diastolic pressure increasing from 59.56 mmHg to 67.21 mmHg at minute 15 (p &lt; 0.001). This study provides context-specific clinical evidence on the hemodynamic effects of lower limb elevation among post-spinal anesthesia cesarean section patients in a clinical setting. However, the non-inclusion of a control group and randomization reduce the strength of causal interpretation. These findings provide support for the notion that lower limb elevation may enhance potential benefits as a supportive intervention for post-spinal hypotension and warrant further controlled studies to confirm its efficacy.",
+      "tags": [
+        "Cesarean section",
+        "Hypotension",
+        "Lower-limb elevation",
+        "Maternal hemodynamics",
+        "Spinal anesthesia"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Impact of lower limb elevation on blood pressure in cesarean patients: a quasi-experimental study",
+      "url": "https://zenodo.org/records/22699871"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "7910b76d203eaec1afa120a5",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605833Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "This repository contains code and data for fracture network characterization using tracer test data, based on the CMAM (Covariance Matrix Adaptation Metropolis) algorithm integrated with a pre-trained WGAN-GP deep generative model. The workflow combines generative modeling, forward simulation via GEOS , and Bayesian-style inversion to infer fracture properties from observational data. Two cases are provided: a synthetic benchmark case and a real-field application at the Soultz-sous-For&ecirc;ts geothermal site in France. Repository Structure SyntheticCase/ A hypothetical 2D case for validating the inversion methodology. Reference/ : Input files for generating reference breakthrough curves and thermal simulation. TracerTransport/ :&nbsp; Base XML files for inert and sorptive tracer simulations ( TracerInert.xml , TracerSorptive.xml ) and fracture model template ( FractureInfo.xml ). ThermalSimulation/ : Input files for thermal-hydraulic simulations, in which the water density is evaluated using the IAPWS formulation and the dynamic viscosity is described by a temperature-dependent relationship ( THSimu.xml , FractureInfo.xml ). Inversion/ : Core inversion workflow for the synthetic case. CMAM.py : Main inversion script using the CMAM algorithm; supports multi-core parallelism. Generation.py : Reads latent parameters from CMAM and reconstructs fracture networks using a pre-trained WGAN-GP generator. TracerModeling.py : Writes generated fracture networks to FractureInfo.xml , calls GEOS for forward simulation, and returns results to the inversion. utils.py : Utility functions for the WGAN-GP model. run.py : Launcher script that runs `CMAM.py` as a background process. FlowTracerInert.xml / FlowTracerSorptive.xml : GEOS base configuration files for inert and sorptive tracer transport. FractureInfo.xml : Dynamically updated fracture model file. InertData.txt , SorptiveData.txt , PressureData.txt : Observational data for inversion. SoultzCase/ Real-field application at the Soultz-sous-For&ecirc;ts geothermal site (France).&nbsp; Inversion/ &ndash; Core inversion workflow for the Soultz case. Structure is similar to SyntheticCase/Inversion/ , with site-specific data: CMAM.py , Generation.py , run.py , utils.py , TracerModeling.py , FractureInfo.xml : Same functionality as in the synthetic case. FlowTracer.xml : GEOS base configuration for simulating the 2005 fluorescein tracer circulation experiment. SoultzModel.vtu : 3D mesh model of the Soultz site, including well locations (GPK2&ndash;GPK4) and major fault zones (FZ4770, FZ4710). Model source:&nbsp; Geoenergy Modeling III . Flow.txt : Monitored production flow rates at GPK2 and GPK4. TBC.txt : Monitored tracer concentration data at GPK2 and GPK4. ThermalSimulation/ &ndash; Input files and data for thermal-hydraulic simulations at the Soultz site. It contains data files for two case studies: Cuenot.xml , corresponding to the July&ndash;August 2008 short-term circulation test, and Baujard.xml , corresponding to the three-year commercial circulation test (2016&ndash;2019), together with supporting data compiled from published literature. The subfolder table/ stores the tabulated initial fields (initial pressure and temperature), which are assigned to the model via GEOS `TableFunction` objects with linear interpolation. GEOS_src/ Source code of the in-house developments implemented on top of the GEOS simulator: constitutive_fluid/ &ndash; Implementation of the IAPWS-based fluid property models used in the simulations (water density from the IAPWS formulation). fluidFlow-SoluteTransport/ &ndash; Implementation of the solute transport solver, discretized and solved using an implicit finite-volume method (FVM). Workflow The inversion workflow relies on a pre-trained WGAN-GP model that provides a robust mapping from a low-dimensional latent space to geologically realistic discrete fracture network (DFN) realizations. Latent parameter proposal : At each iteration, the CMAM algorithm propose",
+      "tags": [
+        "Fracture network characterization",
+        "Generative adversarial network",
+        "Adaptive inversion",
+        "Behavioral model"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Fracture network characterization via deep generative model and Bayesian inversion",
+      "url": "https://zenodo.org/records/22699772"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "ea7a0e5101ce51b8a87c6abd",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605863Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.375,
+      "source": "zenodo",
+      "source_published": "2026-07-14",
+      "source_updated": null,
+      "summary": "ATMAI project overview ATMAI is an automated threat-modeling toolkit for software repositories. It combines static analysis, attack-surface synthesis, and threat elicitation so that a target project can be analyzed end to end and turned into a threat model with visual and structured outputs. This repository contains two main parts: 1. The ATMAI application itself, which analyzes a repository and generates threat-model artifacts. 2. The evaluation, which runs benchmark experiments for accuracy, effectiveness, and performance.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "ATMAI: Automated Threat modeling for AI-based system",
+      "url": "https://zenodo.org/records/22699849"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "8d4915c85c5165056b0437e8",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "baseline"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605882Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.3333,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "This conceptual article develops a formal theory of atypical human failure in which severe life-course consequences can emerge from a conjunction of adverse conditions, a low-frequency behavioural lapse, stochastic outcome mechanics, categorical legal or institutional thresholds, and dynamically propagating collateral sanctions. The framework integrates moral luck, outcome bias, person-situation theory, human-error research, Bayesian character inference, and the literature on criminal-record stigma and digital punishment. It makes five principal contributions. First, a contextual hazard model distinguishes low baseline propensity from elevated conditional risk under unusual combinations of stressors and weak safeguards. Second, the article formalises threshold-amplified outcome luck, showing how relatively small differences in realised harm can produce discontinuous changes in formal burden. Third, it introduces Bayesian Predictive Atypicality, measured through posterior predictive probability and event surprisal, and then models biographical compression as salience-weighted updating in which one extreme negative observation receives excessive likelihood weight relative to a longer behavioural history; Salience-Prior Distortion is defined using Kullback-Leibler divergence from a full-history posterior. Fourth, a nonnegative punishment-propagation matrix captures spillovers among legal, reputational, occupational, social, and digital burdens, yielding a closed-form expression for discounted lifetime burden under stability conditions and a Collateral Punishment Multiplier. Fifth, the paper specifies a five-study empirical programme designed to distinguish explanation from exculpation, identify outcome-luck effects, test threshold discontinuities, and measure post-sanction persistence. The theory does not imply that rare misconduct is uninformative or that harmful outcomes should be ignored. Its normative claim is narrower: proportional accountability requires distinguishing stable propensity from situationally amplified tail failure, culpable action from stochastic outcome, and finite formal punishment from collateral processes that can become self-reinforcing and temporally unbounded.",
+      "tags": [
+        "Conjunctive misfortune",
+        "Bayesian character inference",
+        "Moral luck",
+        "Outcome bias",
+        "Collateral punishment",
+        "Blame",
+        "Skepticism"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Atypical Failure, Maximal Consequence: Bayesian Character Inference, Threshold Outcome Luck, and Multiplicative Punishment Cascades",
+      "url": "https://zenodo.org/records/22699760"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "a9fdde2204f0ce5441ad79eb",
+      "direction_id": "ocean_reader::CONTROL",
+      "direction_title": "Ocean Reader / transceiver / invertibility [CONTROL]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "benchmark",
+        "replication"
+      ],
+      "mirror_lens": "CONTROL",
+      "routed_at": "2026-09-11T03:36:14.605894Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.8333,
+      "source": "zenodo",
+      "source_published": "2026-09-10",
+      "source_updated": null,
+      "summary": "PatchAudit &mdash; Research Artifact This is the replication artifact for the paper \"PatchAudit: Uncovering Faulty Security Patches and Lingering Zero-Days at Scale.\" PatchAudit audits a CVE's security patch to determine whether it is a faulty (bad) patch. Given a CVE's initial patch commit C1 and the repository, it discovers whether any later commit C2 is a future commit &mdash; one that continues the fix because C1 was incomplete (left the same vulnerability reachable) or incorrect (introduced a defect that a later commit repairs). If such a future commit exists, C1 is a bad patch; if the latest future commit still does not close the hole, it is a lingering (zero-day) bad patch. Approach (three phases). 1. Explicit intent &mdash; extract explicit references (the CVE id or C1's commit hash) from a later commit's message and validate genuine continuation; only high-confidence explicit matches skip Phase 2. 2. Semantic intent &mdash; build a Code Property Graph (Joern), intersect the interprocedural forward slices of C1 and the candidate into an Intent Scope, and let a fine-tuned code LLM (Qwen3-14B) &mdash; or an optional autonomous agent that retrieves additional function/variable/issue/web context &mdash; decide whether the candidate shares C1's patching intent. 3. Multi-pronged verification &mdash; an independent GPT-5 judge audits the reasoning, while CodeQL + Semgrep provide corroborating vulnerability-state evidence (used only when reliable; otherwise treated as a possible false negative). Arbitration accepts on mutual support, otherwise runs a bounded refinement loop and falls back to the agent's prediction. The output is a futurlabel with, for a bad patch, an &nbsp; &nbsp;incomplete/incorrect classification and ause. Contents (single patchaudit_bundle_adapters.tar.zst, &asymp;3.4 GB): - patchaudit-analysis-image.tar &mdash; prebuilt Cned Joern 4.0.614, CodeQL 2.26.4, Semgrep1.175.0, JDK 21) with the full Phase 1&ndash;3 pipeline. - tools/ &mdash; the pipeline (Python), plus tools/agent/ for the optional agentic Phase 2 (with requirements.txt). - models/ &mdash; fine-tuned LoRA adapters over Qwlora). - data/ &mdash; BadPatch-Bench (benchmark_565.jsonl: 565 labeled (C1, C2) pairs over 110 CVEs), the labeled positive/negative CVE sets, re-exploitation cases, and zero-day PoCs (for defensive research only). - examples/ &mdash; two worked cases: Django CVE-2nd NOAA-PMEL/LAS CVE-2025-62193 (a new 2026&nbsp;CVE). - reproduce/ &mdash; scripts and data to regenerate the paper's large-scale-study tables and figures. Running it. docker load -i patchaudit-analysker run --rm --network host -e OPENAI_API_KEY -v $PWD/examples:/cases -v /path/to/repo:/repos/&lt;repo&gt;:ro patchaudit-analysis:latest /cases/case_CVE-2021-31542 all --stop-at-first-yes. Phase 2 uses a GPU serving Qwen3-14B + our LoRA adapter (see tools/vllm_server.sh); Phase 3 verification uses the GPT-5 API (OPENAI_API_setup, the table/figure reproduction steps,and troubleshooting. Mirror: also available on Hugging Face (zhch.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Artifact for \"PatchAudit: Uncovering Faulty Security Patches and Lingering Zero-Days at Scale\"",
+      "url": "https://zenodo.org/records/22698136"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "9f8b985df3f22a7f8084a960",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "inversion",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606122Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.1667,
+      "source": "arxiv",
+      "source_published": "2026-07-03T17:50:02Z",
+      "source_updated": "2026-07-03T17:50:02Z",
+      "summary": "The split-step-Padé (SSP) method is widely used to model wave phenomena in various applications, including radio physics, optics and acoustics. In this method, the propagator of the one-way counterpart of the Helmholtz equation is computed through its Padé approximant and a finite-difference discretization of the transverse operator. This work develops and validates numerically a spectral counterpart of the SSP method. A key challenge in practical applications is inverting the transverse operator in the presence of perfectly matched layers (PMLs), which are commonly used to truncate the computational domain. Such inversion can be accomplished using Krylov subspace methods, which converge rapidly, provided that a suitable preconditioner is used. We also study the analytical properties of the spectral SSP marching scheme under periodicity conditions in the transverse variable. We validate the newly developed spectral SSP method numerically in two realistic test scenarios from radio physics and underwater acoustics.",
+      "tags": [
+        "math.NA"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "A perfectly matched layer approach for the spectral split-step Padé method",
+      "url": "https://arxiv.org/abs/2607.03521v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "9c2e693b1bcfd27ff78a94e2",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606135Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.375,
+      "source": "arxiv",
+      "source_published": "2026-04-19T21:12:06Z",
+      "source_updated": "2026-04-19T21:12:06Z",
+      "summary": "Advances in computational methods have made full-wave simulations in large disordered media increasingly feasible, but the resulting field data, scaling with the cube of the ratio of system size to wavelength, creates a severe storage and post-processing bottleneck. Generic compression methods are sample-specific and preclude operations on compressed data. We introduce OSCAR (On-Shell Compression And Reconstruction), a physics-based lossy compression scheme for weakly scattering media. OSCAR exploits the universal confinement of the Fourier representation of wave fields to a thin dispersion shell, a direct consequence of wave propagation when the scattering mean free path significantly exceeds the wavelength. The resulting compression ratio reflects two distinct scale separations: on-shell confinement due to weak scattering, and the excess Fourier-space volume introduced by sub-wavelength discretization of the scatterers. Crucially, second-order quantities such as intensity, correlations, and (optical) sensitivity can be computed via convolution entirely in compressed space and remain accurate even when individual field reconstruction incurs appreciable error, because coherent interference between independently compressed fields is preserved. Numerical simulations of electromagnetic waves in 2D and 3D confirm compression ratios up to ${\\sim}380\\times$ with sub-percent field error, enabling routine ensemble studies at scales relevant to biomedical optics, seismology, and underwater acoustics.",
+      "tags": [
+        "physics.optics",
+        "cond-mat.dis-nn"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Universal compression of wave fields in weakly scattering media",
+      "url": "https://arxiv.org/abs/2604.17617v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "c9095d4b43e42d8fe03b3c12",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606151Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.375,
+      "source": "arxiv",
+      "source_published": "2026-03-11T09:40:45Z",
+      "source_updated": "2026-03-11T09:40:45Z",
+      "summary": "Accurate estimation of the sound speed profile (SSP) is essential for underwater acoustic communication, sonar performance, and navigation, as the acoustic wave propagation depends strongly on the SSP. This work considers SSP estimation in a region of interest using an autonomous underwater vehicle (AUV) equipped with a conductivity-temperature-depth (CTD) sensor and an acoustic receiver measuring transmission loss (TL) from a sonar transmitter. The SSP is modeled using a linear basis-function expansion and is sequentially estimated with an unscented Kalman filter that fuses local CTD measurements with TL measurements. A receding-horizon path planning scheme is also employed to select future AUV positions by minimizing the predicted total sound speed variance. Simulations using the Bellhop acoustic wave propagation solver show that CTD measurements provide accurate local SSP estimates, whereas TL measurements are seen to capture the global characteristics of the SSP, with their joint use improving the reconstruction of both local variations and large-scale SSP behavior. The results also indicate that the proposed path planning strategy reduces the estimation uncertainty compared to constant-velocity motion, thereby enabling improved environmental characterization for underwater acoustic systems.",
+      "tags": [
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Path Planning for Sound Speed Profile Estimation",
+      "url": "https://arxiv.org/abs/2603.10585v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "c818aaf870ec9d4d33b3bcbb",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "hydrophone",
+        "inversion",
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606164Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 13.375,
+      "source": "arxiv",
+      "source_published": "2026-02-02T10:13:18Z",
+      "source_updated": "2026-02-02T10:13:18Z",
+      "summary": "In marine towed-streamer seismic acquisition, the nearest hydrophone is often two hundred meter away from the source resulting in missing near-offset traces, which degrades critical processing workflows such as surface-related multiple elimination, velocity analysis, and full-waveform inversion. Existing reconstruction methods, like transform-domain interpolation, often produce kinematic inconsistencies and amplitude distortions, while supervised deep learning approaches require complete ground-truth near-offset data that are unavailable in realistic acquisition scenarios. To address these limitations, we propose a self-supervised diffusion-based framework that reconstructs missing near-offset traces without requiring near-offset reference data. Our method leverages overlapping patch extraction with single-trace shifts from the available far-offset section to train a conditional diffusion model, which learns offset-dependent statistical patterns governing event curvature, amplitude variation, and wavelet characteristics. At inference, we perform trace-by-trace recursive extrapolation from the nearest recorded offset toward zero offset, progressively propagating learned prior information from far to near offsets. The generative formulation further provides uncertainty estimates via ensemble sampling, quantifying prediction confidence where validation data are absent. Controlled validation experiments on synthetic and field datasets show substantial performance gains over conventional parabolic Radon transform baselines. Operational deployment on actual near-offset gaps demonstrates practical viability where ground-truth validation is impossible. Notably, the reconstructed waveforms preserve realistic amplitude-versus-offset trends despite training exclusively on far-offset observations, and uncertainty maps accurately identify challenging extrapolation regions.",
+      "tags": [
+        "physics.geo-ph",
+        "cs.LG"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Propagating the prior from far to near offset: A self-supervised diffusion framework for progressively recovering near-offsets of towed-streamer data",
+      "url": "https://arxiv.org/abs/2602.01909v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "97cb7fd15e181c21a23b4cc8",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606178Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.375,
+      "source": "arxiv",
+      "source_published": "2025-10-02T20:39:29Z",
+      "source_updated": "2025-10-02T20:39:29Z",
+      "summary": "Sonar images are relevant for advancing underwater exploration, autonomous navigation, and ecosystem monitoring. However, the progress depends on data availability. The scarcity of publicly available, well-annotated sonar image datasets creates a significant bottleneck for the development of robust machine learning models. This paper presents a comprehensive and concise review of the current landscape of sonar image datasets, seeking not only to catalog existing resources but also to contextualize them, identify gaps, and provide a clear roadmap, serving as a base guide for researchers of any kind who wish to start or advance in the field of underwater acoustic data analysis. We mapped publicly accessible datasets across various sonar modalities, including Side Scan Sonar (SSS), Forward-Looking Sonar (FLS), Synthetic Aperture Sonar (SAS), Multibeam Echo Sounder (MBES), and Dual-Frequency Identification Sonar (DIDSON). An analysis was conducted on applications such as classification, detection, segmentation, and 3D reconstruction. This work focuses on state-of-the-art advancements, incorporating newly released datasets. The findings are synthesized into a master table and a chronological timeline, offering a clear and accessible comparison of characteristics, sizes, and annotation details datasets.",
+      "tags": [
+        "cs.CV"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Sonar Image Datasets: A Comprehensive Survey of Resources, Challenges, and Applications",
+      "url": "https://arxiv.org/abs/2510.03353v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "4048bbb1f6dbc48792b45b5d",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "hydrophone",
+        "inversion"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606208Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.7917,
+      "source": "arxiv",
+      "source_published": "2025-08-10T03:12:08Z",
+      "source_updated": "2025-08-13T10:35:30Z",
+      "summary": "Based on the normal mode and ray theory, this article discusses the characteristics of surface sound source and reception at the surface layer, and explores depth estimation methods based on normal modes and rays, and proposes a depth estimation method based on the upper limit of modal frequency. Data verification is conducted to discuss the applicability and limitations of different methods. For the surface refracted normal mode waveguide, modes can be separated through warping transformation. Based on the characteristics of normal mode amplitude variation with frequency and number, the sound source depth can be estimated by matching amplitude information. Based on the spatial variation characteristics of eigenfunctions with frequency, a sound source depth estimation method matching the cutoff frequency of normal modes is proposed. For the deep Arctic sea, the sound ray arrival structure at the receiving end is obtained through the analysis of deep inversion sound ray trajectories, and the sound source depth can be estimated by matching the time difference of ray arrivals. Experimental data is used to verify the sound field patterns and the effectiveness of the sound source depth estimation method.",
+      "tags": [
+        "cs.SD",
+        "eess.AS",
+        "math.NA",
+        "physics.ao-ph",
+        "physics.app-ph"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Acoustic source depth estimation method based on a single hydrophone in Arctic underwater",
+      "url": "https://arxiv.org/abs/2508.07157v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "e97c33857a471d860ce02090",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "hydrophone",
+        "inversion"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606235Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.7917,
+      "source": "arxiv",
+      "source_published": "2025-08-10T03:01:10Z",
+      "source_updated": "2025-08-13T10:33:43Z",
+      "summary": "For the unique dual-channel sound speed profiles of the Canadian Basin and the Chukchi Plateau in the Arctic, based on the propagation characteristics of refracted normal modes under dual-channel sound speed profiles, an inversion method using refracted normal modes for dual-channel sound speed profiles is proposed. This method proposes a dual-parameter representation method for dual-channel sound speed profiles, tailored to the characteristics of dual-channel sound speed profiles. A dispersion structure extraction method is proposed for the dispersion structure characteristics of refracted normal modes under dual-channel sound speed profiles. Combining the parameter representation method of sound speed profiles and the dispersion structure extraction method, an inversion method for dual-channel sound speed profiles is proposed. For the common horizontal variation of sound speed profiles in long-distance acoustic propagation, a method for inverting horizontally varying dual-channel sound speed profiles is proposed. Finally, this article verifies the effectiveness of the dual-channel sound speed profile inversion method using the Arctic low-frequency long-range acoustic propagation experiment. Compared with previous sound speed profile inversion methods, the method proposed in this article has the advantages of fewer inversion parameters and faster inversion speed. It can be implemented using only a single hydrophone passively receiving random air gun signals, and it also solves the inversion problem of horizontal variation of sound speed profiles. It has significant advantages such as low cost, easy deployment, and fast computation speed.",
+      "tags": [
+        "cs.SD",
+        "eess.AS",
+        "math.NA",
+        "physics.ao-ph",
+        "physics.app-ph"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Inversion of Arctic dual-channel sound speed profile based on random airgun signal",
+      "url": "https://arxiv.org/abs/2508.07152v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "18f8b2ac93a1f955b57f9f09",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "multipath",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606269Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 6.1667,
+      "source": "arxiv",
+      "source_published": "2025-06-29T17:54:00Z",
+      "source_updated": "2025-06-29T17:54:00Z",
+      "summary": "Underwater wireless communications face significant challenges due to propagation constraints, limiting the effectiveness of traditional radio and optical technologies. Long-range acoustic communications support distances up to a few kilometers, but suffer from low bandwidth, high error ratios, and multipath interference. Semantic communications, which focus on transmitting extracted semantic features rather than raw data, present a promising solution by significantly reducing the volume of data transmitted over the wireless link. This paper evaluates the resilience of SAGE, a semantic-oriented communications framework that combines semantic processing with Generative Artificial Intelligence (GenAI) to compress and transmit image data as textual descriptions over acoustic links. To assess robustness, we use a custom-tailored simulator that introduces character errors observed in underwater acoustic channels. Evaluation results show that SAGE can successfully reconstruct meaningful image content even under varying error conditions, highlighting its potential for robust and efficient underwater wireless communication in harsh environments.",
+      "tags": [
+        "cs.NI"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "On the Resilience of Underwater Semantic Wireless Communications",
+      "url": "https://arxiv.org/abs/2506.23350v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "678c5faaaaeb1317fa5dac88",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "reconstruction",
+        "underwater acoustic"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606292Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 9.375,
+      "source": "arxiv",
+      "source_published": "2025-06-13T10:00:27Z",
+      "source_updated": "2025-06-13T10:00:27Z",
+      "summary": "Reconstructing physical field tensors from \\textit{in situ} observations, such as radio maps and ocean sound speed fields, is crucial for enabling environment-aware decision making in various applications, e.g., wireless communications and underwater acoustics. Field data reconstruction is often challenging, due to the limited and noisy nature of the observations, necessitating the incorporation of prior information to aid the reconstruction process. Deep neural network-based data-driven structural constraints (e.g., ``deeply learned priors'') have showed promising performance. However, this family of techniques faces challenges such as model mismatches between training and testing phases. This work introduces FieldFormer, a self-supervised neural prior learned solely from the limited {\\it in situ} observations without the need of offline training. Specifically, the proposed framework starts with modeling the fields of interest using the tensor Tucker model of a high multilinear rank, which ensures a universal approximation property for all fields. In the sequel, an attention mechanism is incorporated to learn the sparsity pattern that underlies the core tensor in order to reduce the solution space. In this way, a ``complexity-adaptive'' neural representation, grounded in the Tucker decomposition, is obtained that can flexibly represent various types of fields. A theoretical analysis is provided to support the recoverability of the proposed design. Moreover, extensive experiments, using various physical field tensors, demonstrate the superiority of the proposed approach compared to state-of-the-art baselines.",
+      "tags": [
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "FieldFormer: Self-supervised Reconstruction of Physical Fields via Tensor Attention Prior",
+      "url": "https://arxiv.org/abs/2506.11629v1"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "5bcc51cc932770b1b0b3a37a",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "hydrophone",
+        "inversion"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606314Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 8.7917,
+      "source": "arxiv",
+      "source_published": "2025-05-02T20:03:04Z",
+      "source_updated": "2025-08-27T19:40:34Z",
+      "summary": "Passive acoustics is a versatile tool for maritime situational awareness, enabling applications such as source detection and localization, marine mammal tracking, and geoacoustic inversion. This study focuses on estimating the range between an acoustic receiver and a transiting ship in an acoustically range-independent shallow water environment. Here, acoustic propagation can be modeled by a set of modes that are determined by the shallow water waveguide and seabed characteristics. These modes are dispersive, with phase and group velocities varying with frequency, and their interference produces striation patterns that depend on range and frequency in single-hydrophone spectrograms. These striation patterns can often be characterized by the waveguide invariant (WI), a single parameter describing the waveguide's properties. This paper presents a statistical model and corresponding WI-based range estimation approach using a single hydrophone, leveraging broadband and tonal sounds from a transiting ship. Using data from the Seabed Characterization Experiment 2017 (SBCEX17), the method was evaluated on two commercial ships under different environmental conditions and frequency bands. Range estimation errors remained below 4 % up to 62 km in the best case, with robust performance demonstrated in the 40-60 Hz band.",
+      "tags": [
+        "eess.SP"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Statistical Model and Estimation Method for Ranging a Moving Ship Using a Single Acoustic Receiver in Shallow Water",
+      "url": "https://arxiv.org/abs/2505.01562v2"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "3ea28895e1650e8126decc5e",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606344Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "This review examines the astronomical heritage and cultural syncretism of the Afar people of Ethiopia, situated at the historic African-Islamic crossroads. Synthesising oral traditions, linguistic evidence, historical texts, and archaeological observations, the reviewed scholarship demonstrates that the Afar developed sophisticated celestial knowledge systems long preceding Islam, centred on lunar worship, a supreme sky deity (Waako), and intermediary spirits (Ayyana). The study reveals that Afar astronomical traditions, particularly the 28 lunar mansions (mafgadōdi), represent a unique synthesis of indigenous Cushitic cosmology and Islamic astronomical knowledge, mediated through centuries of Red Sea trade and cultural exchange (Morin, 1988). Linguistic analysis shows that key religious and astronomical terms, including Alsa (moon), Waako (supreme deity), Yalla (God), and Ayyana (intermediary spirits), remain embedded in contemporary Afar vocabulary, demonstrating remarkable cultural continuity despite profound religious transformation. Mathematical reconstruction of the Afar calendar reveals sophisticated celestial coordinate mapping, with the 28 mansions systematically partitioned across the celestial sphere into \"white\" (northern) and \"red\" (southern) hemisphere divisions. Comparative analysis demonstrates that Cushitic calendrical systems, including the Borana Oromo calendar (r=0.889, RMSE = 3.3 days), exhibit remarkable predictive skill for seasonal forecasting. The Afar new year is determined by the first rainfall (Konayto) observed after the Ethiopian New Year, reflecting the integration of lunar astronomical observation, seasonal ecological indicators, and Ethiopian calendrical influence. The findings challenge conventional models of Islamization that emphasize rupture and replacement, instead revealing a pattern of layered adaptation where pre-Islamic celestial worship persisted within an Islamic framework. This research contributes significantly to understanding cultural syncretism, the transmission of astronomical knowledge across cultural boundaries, and the historical dynamics of the Horn of Africa.",
+      "tags": [
+        "Afar people; ethnoastronomy; cultural syncretism; lunar mansions; Islamic–African crossroads; linguistic evidence; Red Sea trade"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Astronomical Heritage and Cultural Syncretism among the Afar of Ethiopia: Linguistic Evidence from the African–Islamic Crossroads",
+      "url": "https://zenodo.org/records/22700437"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "ac5553f95e205b0d16f173d4",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606371Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_published": "2025-04-26",
+      "source_updated": null,
+      "summary": "Structure and Derivation of Physical Constants through Wave Confinement Richard J. Reyes Original: April 26, 2025 Revised: September 10, 2026 This work investigates whether fundamental physical constants and scales can arise from the geometry and dynamics of confined oscillatory fields governed by curvature feedback within Wave Confinement Theory (WCT) . WCT treats oscillatory energy, confinement geometry, curvature, coherence, and information as coupled components of a nonlinear field system. The central proposal is that quantities normally treated as externally specified constants may instead be related to stable geometric or dynamical features of confined wave configurations. The September 2026 revision performs a full consistency sweep of the original derivations. It distinguishes four conceptually different classes of result: algebraic or dimensional identities, domain-local resonance quantities, numerical simulation outputs, and open eigenvalue or dynamical predictions. In particular, standard Planck relations and the reconstruction of ℏ are now explicitly identified as self-consistency identities when their measured inputs are already used, rather than independent predictions. A principal numerical scale investigated in the work is the WCT vacuum coherence length &xi;_sim = 85.4 &mu;m. An independent cosmological-density relation, &rho;&xi; = C&xi; ℏc / &xi;⁴, gives &xi;&Lambda; = 87.78 &mu;m for unit geometric coefficient C&xi;=1C_\\xi=1 when the observed cosmological constant is used. The simulation value differs by approximately 2.72% , and exact agreement corresponds to the order-unity coefficient C&xi; &asymp; 0.8957 . This is treated as a cross-domain consistency relation rather than a parameter-free determination of the cosmological constant. The same relation can be inverted as a partial cross-domain test of Newton's gravitational constant. With C&xi;=1C_\\xi=1 , &xi; = 85.4 &mu;m, and the observed cosmological constant, the calculation gives G&xi; &asymp; 5.9783 &times; 10⁻&sup1;&sup1; m&sup3; kg⁻&sup1; s⁻&sup2;, approximately 10.43% below the measured Newtonian value. Propagating this value through the standard Planck relations produces Planck length and time estimates about 5.36% below their standard values and a Planck energy about 5.66% above the standard value. Because &Lambda;, ℏ, and c remain external inputs, this is presented as a cross-domain numerical consistency test rather than a complete first-principles derivation . The revised work also formulates the fine-structure constant as a WCT+electromagnetic geometric eigenvalue problem rather than obtaining &alpha;&alpha; by substituting the measured charge into the standard electromagnetic identity. Numerical closure of this shape-eigenvalue problem remains open. WCT additionally defines a family of structural quantities associated with confinement: Vacuum coherence scale: &xi; &asymp; 85.4 &mu;m Entropy-curvature ratio: &sigma; &asymp; 0.0806 Resonance confinement strength: analytic lock target &rho; = 1, with regime-dependent numerical values Topological resonance parameter: &beta; &asymp; 0.01&ndash;0.1 Phase-coherence distortion scale: &gamma; &asymp; 10⁻&sup1;&sup2;⁰ Nonlinear curvature-feedback coefficient: &theta; &asymp; 10⁻&sup1;&sup2;⁰ in the stated phenomenological normalization Phase-speed curvature correction coefficient: &zeta; ~ 10⁻&sup2; These quantities are not all asserted to be universal constants. Several are simulation-dependent descriptors whose values depend on numerical regime, geometry, normalization, boundary conditions, and physical-unit mapping. The numerical simulations exhibit reproducible confinement behavior, Fourier-selected coherence structure, entropy evolution, and resonance stabilization. Importantly, the revised analysis recognizes that the frequently obtained Shannon entropy value near 13.862 is extremely close to the discrete entropy ceiling Smax⁡=ln⁡(10242)=13.8629436S_{\\max}=\\ln(1024^2)=13.8629436 , and therefore ",
+      "tags": [
+        "wave confinement",
+        "fundamental constants",
+        "gravitational constant",
+        "speed of light",
+        "planck constant",
+        "fine-structure constant",
+        "cosmological constant",
+        "emergent mass",
+        "curvature feedback",
+        "unified field theory",
+        "entropy-stabilized fields",
+        "effective metric",
+        "informational geometry"
+      ],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Structure and Derivation of Physical Constants through Wave Confinement",
+      "url": "https://zenodo.org/records/22699826"
+    },
+    {
+      "base_direction_id": "ocean_reader",
+      "candidate_id": "a4d4ba0140d62df67f9165cf",
+      "direction_id": "ocean_reader::REVERSE",
+      "direction_title": "Ocean Reader / transceiver / invertibility [REVERSE]",
+      "epistemic_status": "DISCOVERY_INBOX__UNVERIFIED__NO_PROOF_AUTHORITY",
+      "firewall": [
+        "ROUTED_NE_VERIFIED",
+        "INBOX_NE_EVIDENCE",
+        "PRIORITY_NE_TRUTH",
+        "MIRROR_LENS_NE_CONFIRMATION"
+      ],
+      "keyword_hits": [
+        "reconstruction"
+      ],
+      "mirror_lens": "REVERSE",
+      "routed_at": "2026-09-11T03:36:14.606400Z",
+      "schema": "janus.beetle.repo_memory_item.v1",
+      "score": 4.5833,
+      "source": "zenodo",
+      "source_published": "2026-09-11",
+      "source_updated": null,
+      "summary": "This dataset supports the study \"Network Centrality and Post-Disaster Restoration Duration: Evidence from Road Infrastructure in Aceh, Indonesia\" (Wulansari et al., submitted to Forum Geografi). It documents road and bridge restoration following the November 2025 flood and landslide event in Bener Meriah Regency, Aceh Province, Indonesia. The dataset contains three files: asset_level_data &mdash; Restoration records for 26 damaged road and bridge assets, including road classification, construction type, disruption date, restoration date, restoration duration, and network centrality measures (degree, betweenness, closeness). road_network_graph &mdash; The road network graph used for centrality computation, derived from OpenStreetMap and institutional road data, covering the affected area of Bener Meriah Regency. news_source_list &mdash; A list of 313 online news article titles, publication dates, and URLs used to reconstruct the disruption and restoration timeline via digital-trace analysis. Sentiment-labeled content from 3,351 X (Twitter) posts also informed the study's timeline reconstruction, but individual post-level data is not included here: post identifiers were not retained during data collection, and redistribution of post content is restricted by the platform's terms of service. Aggregate characteristics of this corpus are reported in the associated manuscript.",
+      "tags": [],
+      "target_repository": "Hawkar-usls/The-Voice-of-Janus",
+      "title": "Network Centrality and Post-Disaster Restoration Duration: Evidence from Road Infrastructure in Aceh, Indonesia",
+      "url": "https://zenodo.org/records/22699838"
+    }
+  ],
+  "schema": "janus.beetle.repo_memory_batch.v1",
+  "target_repository": "Hawkar-usls/The-Voice-of-Janus"
+}
