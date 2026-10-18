@@ -1,10 +1,10 @@
 {
-  "acknowledged_at": "2026-10-17T23:31:18.135630Z",
-  "batch_id": "8850f37d9933f371175b",
-  "last_sequence": 3,
+  "acknowledged_at": "2026-10-18T01:34:15.117314Z",
+  "batch_id": "4ef3cb4551e489f9c527",
+  "last_sequence": 4,
   "schema": "janus.beetle.inbox_ack.v1",
   "scientific_authority_delta": 0,
-  "sha256": "574bd39a6fc316a78b0e9f3d0137d3245131c506c307d6fa409dfda4ae7ec554",
+  "sha256": "9cc1635a637786b09051b772daf4ce4ebb5d724792961706c2eca000dac4aa7f",
   "status": "INBOX_DURABLE_UNVERIFIED__NOT_RUNTIME_CONSUMPTION",
   "target_repository": "Hawkar-usls/The-Voice-of-Janus"
 }
