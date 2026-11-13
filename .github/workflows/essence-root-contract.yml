@@ -1,0 +1,30 @@
+name: ESSENCE singleton root
+on:
+  pull_request:
+    paths: ['.janus/essence/**', '.github/workflows/essence-root-contract.yml']
+permissions: {contents: read}
+jobs:
+  root-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - env: {ESSENCE_REPO: "${{ github.repository }}"}
+        run: |
+          python - <<'PY'
+          import importlib.util,json,os,pathlib
+          d=pathlib.Path('.janus/essence')
+          def load(n):
+              s=importlib.util.spec_from_file_location(n,d/(n+'.py'));o=importlib.util.module_from_spec(s);s.loader.exec_module(o);return o
+          m=json.loads((d/'manifest.json').read_text())
+          k=load('kernel');f=load('collective_seed')
+          k.validate_manifest(m,os.environ['ESSENCE_REPO'])
+          f.validate_manifest(m,os.environ['ESSENCE_REPO'])
+          f.validate_innovations(json.loads((d/'innovations.json').read_text()),os.environ['ESSENCE_REPO'])
+          assert len(list(d.glob('kernel.py')))==1
+          assert not m['enabled'] and not any(m['capabilities'].values())
+          print('ESSENCE_SINGLETON_ROOT_PASS')
+          PY
