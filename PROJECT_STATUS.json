@@ -1,0 +1,31 @@
+{
+  "schema_id": "hawkar.project-status.v1",
+  "project": "The-Voice-of-Janus",
+  "repository": "https://github.com/Hawkar-usls/The-Voice-of-Janus",
+  "portfolio_class": "audio_dsp_prototype",
+  "last_reviewed": "2026-11-22",
+  "maturity": "ACTIVE_PROTOTYPE",
+  "completion_status": "DETERMINISTIC_ACOUSTIC_RENDERER_REFERENCE__PHYSICAL_MEASUREMENT_HOLD",
+  "summary": "Geometry-to-modal-frequency reference calculations, bounded DSP/WAV rendering and provenance receipts, separate from empirical acoustic validation.",
+  "implemented": [
+    "JSON-configured modal solver and deterministic WAV rendering reference",
+    "Geometry-to-frequency formula and evidence/creative-translation boundaries",
+    "Provenance receipt and example chamber preset"
+  ],
+  "not_established": [
+    "Measured acoustic modes of the Great Pyramid or other chambers",
+    "One universal or mystical frequency for historical structures",
+    "Independent hardware acoustic calibration or historical source verification"
+  ],
+  "flagship_research": false,
+  "source_review": {
+    "scope": "PUBLIC_METADATA_AND_SOURCE_DOCUMENTATION_ONLY",
+    "main_commit_before_metadata_update": "21443c4314e61b11420389a7aafc4dad729109ab",
+    "canonical_detailed_status": "README.md",
+    "ci_reference": "https://github.com/Hawkar-usls/The-Voice-of-Janus/actions",
+    "independent_external_science_validation": false,
+    "no_runtime_or_model_change": true
+  },
+  "visibility_policy": "https://github.com/Hawkar-usls/Janus/blob/audit/portfolio-20261122-full-reconciliation/portfolio-visibility.json",
+  "presentation_standard": "https://github.com/Hawkar-usls/Janus/blob/main/docs/PUBLIC_REPOSITORY_PRESENTATION_STANDARD.md"
+}
