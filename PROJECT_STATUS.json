@@ -24,8 +24,9 @@
     "canonical_detailed_status": "README.md",
     "ci_reference": "https://github.com/Hawkar-usls/The-Voice-of-Janus/actions",
     "independent_external_science_validation": false,
-    "no_runtime_or_model_change": true
+    "no_runtime_or_model_change": true,
+    "portfolio_reconciliation_pr": "https://github.com/Hawkar-usls/Janus/pull/69"
   },
-  "visibility_policy": "https://github.com/Hawkar-usls/Janus/blob/audit/portfolio-20261122-full-reconciliation/portfolio-visibility.json",
+  "visibility_policy": "https://github.com/Hawkar-usls/Janus/blob/main/portfolio-visibility.json",
   "presentation_standard": "https://github.com/Hawkar-usls/Janus/blob/main/docs/PUBLIC_REPOSITORY_PRESENTATION_STANDARD.md"
 }
